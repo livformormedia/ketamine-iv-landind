@@ -51,9 +51,9 @@ export default function Home2() {
       <WhatToExpect />
       <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <ProofSection />
+      <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <AboutDoctorSection />
       <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
-      <IVKetamineFAQ />
       <FinalInvitationSection />
       <FloatingCTA onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <AssessmentModal isOpen={isAssessmentModalOpen} onClose={() => setIsAssessmentModalOpen(false)} />
