@@ -9,6 +9,7 @@ import FinalInvitationSection from "../components/landing-v2/FinalInvitationSect
 import FloatingCTA from "../components/landing-v2/FloatingCTA";
 import AssessmentModal from "../components/landing-v2/AssessmentModal";
 import CTAButton from "../components/landing-v2/CTAButton";
+import IVKetamineFAQ from "../components/landing-v2/IVKetamineFAQ";
 
 export default function Home2() {
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
@@ -52,6 +53,7 @@ export default function Home2() {
       <ProofSection />
       <AboutDoctorSection />
       <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
+      <IVKetamineFAQ />
       <FinalInvitationSection />
       <FloatingCTA onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <AssessmentModal isOpen={isAssessmentModalOpen} onClose={() => setIsAssessmentModalOpen(false)} />
