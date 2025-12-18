@@ -1,12 +1,11 @@
-
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, AlertTriangle } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { sendFacebookLeadEvent } from "@/functions/sendFacebookLeadEvent";
-import clinicConfig from "@/components/config/clinicConfig.json"; 
-import treatmentConfig from "@/components/config/ketaminePageConfig.json"; 
+import clinicConfig from "@/components/config/clinicConfig";
+import treatmentConfig from "@/components/config/ketaminePageConfig"; 
 
 export default function ThankYou() {
   const location = useLocation();
