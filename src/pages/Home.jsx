@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import AuthorityLogos from "../components/landing-v2/AuthorityLogos";
 import HeroSection from "../components/landing-v2/HeroSection";
-import ProblemSection from "../components/landing-v2/ProblemSection";
-import WhyItFailsSection from "../components/landing-v2/WhyItFailsSection";
-import BreakthroughSection from "../components/landing-v2/BreakthroughSection";
+import TestimonialsGallery from "../components/landing-v2/TestimonialsGallery";
+import WhatToExpect from "../components/landing-v2/WhatToExpect";
 import HowItWorksSection from "../components/landing-v2/HowItWorksSection";
 import ProofSection from "../components/landing-v2/ProofSection";
 import ProcessSection from "../components/landing-v2/ProcessSection";
-import ComparisonSection from "../components/landing-v2/ComparisonSection";
 import PricingSection from "../components/landing-v2/PricingSection";
 import FAQSection from "../components/landing-v2/FAQSection";
 import FinalInvitationSection from "../components/landing-v2/FinalInvitationSection";
