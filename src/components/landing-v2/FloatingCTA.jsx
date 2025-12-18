@@ -28,7 +28,7 @@ export default function FloatingCTA({ onOpenAssessment }) {
           
           {/* Button content */}
           <span className="relative flex flex-col items-center justify-center gap-1">
-            <span>Start healing today</span>
+            <span>Start Healing Today</span>
             <span className="text-sm md:text-base font-normal">Take the 30 second quiz</span>
           </span>
         </Button>

@@ -22,31 +22,7 @@ export default function AboutDoctorSection() {
           {/* Doctor Bio */}
           <div className="space-y-4 text-slate-700 leading-relaxed text-center md:text-left">
             <p>
-              Dr. Judah Greenberg grew up in Dallas, TX and earned his undergraduate and medical degrees from the University of Pennsylvania. After spending 8 long, cold winters in Philadelphia, Dr. Greenberg decided that it was time to make his way back down south (fortunately, his new wife agreed), and completed his residency in internal medicine at Emory in Atlanta.
-            </p>
-            
-            <p>
-              Dr. Greenberg then spent time working as a physician in the emergency department of the Atlanta VA Medical Center, and later went on to train in dermatology and skin surgery, but it was during his internal medicine training that Dr. Greenberg began to appreciate how vital the health of the mind is to patients' overall health and well-being.
-            </p>
-            
-            <p>
-              Throughout his extensive medical experience—from the ICU to the ER to the office—Dr. Greenberg has thus sought to cultivate a holistic approach to caring for patients, body and mind.
-            </p>
-            
-            <p>
-              While he spent the last several years practicing dermatology and skin surgery in Middle Georgia, Dr. Greenberg kept up an active interest in psychopharmacology (the study of the effects of medications on the mind and behavior) and closely followed the development of ketamine therapy in the medical literature.
-            </p>
-            
-            <p>
-              After observing firsthand the enormous benefits ketamine therapy can provide to people suffering from an array of mental health conditions (as well as chronic pain), Dr. Greenberg made it his mission to bring this revolutionary and potentially life-changing treatment to the Middle Georgia community.
-            </p>
-            
-            <p className="font-semibold">
-              Dr. Greenberg is board-certified in Internal Medicine, as well as Dermatology and Micrographic Dermatologic Surgery.
-            </p>
-            
-            <p>
-              He is proud to live in Macon with his lovely wife and 6 energetic children.
+              Dr. Judah Greenberg earned his medical degree from the University of Pennsylvania and completed his residency at Emory. He's board-certified in Internal Medicine and Dermatology, with experience ranging from the ICU to the ER. After witnessing the transformative power of ketamine therapy, he brought this breakthrough treatment to Middle Georgia. He lives in Macon with his wife and 6 children.
             </p>
           </div>
         </div>

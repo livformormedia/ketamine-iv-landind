@@ -44,8 +44,8 @@ export default function Home2() {
 
   return (
     <div className="min-h-screen bg-white">
-      <AuthorityLogos />
       <HeroSection onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
+      <AuthorityLogos />
       <TestimonialsGallery />
       <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <WhatToExpect />

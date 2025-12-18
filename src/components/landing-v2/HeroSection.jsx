@@ -29,22 +29,29 @@ export default function HeroSection({ onOpenAssessment }) {
             {treatmentConfig.HERO_DISCLAIMER}
           </p>
           
+          {/* Video */}
+          <div className="w-full max-w-4xl mx-auto mb-8">
+            <div className="relative w-full" style={{ padding: '56.25% 0 0 0' }}>
+              <iframe 
+                src="https://fast.wistia.net/embed/iframe/nc5ldg3nj9?seo=true&videoFoam=true"
+                title="Ketamine Therapy Video"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+
           {/* CTA Button */}
-          <div className="space-y-3">
+          <div className="w-full max-w-4xl mx-auto">
             <Button 
               size="lg"
               onClick={onOpenAssessment}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto"
+              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl flex flex-col items-center gap-1"
             >
-              <span className="flex items-center justify-center gap-2">
-                <span className="whitespace-nowrap">See if you're a good candidate</span>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-              </span>
+              <span>Start Healing Today</span>
+              <span className="text-sm md:text-base font-normal">Take the 30 second quiz</span>
             </Button>
-
-            <p className="text-sm text-slate-600 text-center">
-              {treatmentConfig.HERO_CTA_SUBTEXT}
-            </p>
           </div>
         </div>
       </div>
