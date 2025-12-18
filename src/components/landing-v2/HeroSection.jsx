@@ -1,11 +1,9 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 import treatmentConfig from "@/components/config/ketaminePageConfig";
 
-export default function HeroSection() {
+export default function HeroSection({ onOpenAssessment }) {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
       {/* Decorative Elements */}
@@ -33,17 +31,16 @@ export default function HeroSection() {
           
           {/* CTA Button */}
           <div className="space-y-3">
-            <Link to={createPageUrl("assessment")}>
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <span className="whitespace-nowrap">{treatmentConfig.HERO_CTA_TEXT}</span>
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                </span>
-              </Button>
-            </Link>
+            <Button 
+              size="lg"
+              onClick={onOpenAssessment}
+              className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <span className="whitespace-nowrap">{treatmentConfig.HERO_CTA_TEXT}</span>
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
+              </span>
+            </Button>
             
             <p className="text-sm text-slate-600 text-center">
               {treatmentConfig.HERO_CTA_SUBTEXT}
