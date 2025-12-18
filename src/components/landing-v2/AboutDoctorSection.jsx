@@ -4,22 +4,23 @@ export default function AboutDoctorSection() {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12 md:mb-16">
+        {/* Doctor Image - Centered at top */}
+        <div className="text-center mb-8 md:mb-12">
+          <img 
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/898bd64d4_image.png"
+            alt="Dr. Judah Greenberg"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-xl mx-auto object-cover"
+          />
+        </div>
+
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
           About Dr. Judah Greenberg
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Doctor Image */}
-          <div className="order-2 md:order-1">
-            <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/898bd64d4_image.png"
-              alt="Dr. Judah Greenberg"
-              className="w-full rounded-2xl shadow-xl"
-            />
-          </div>
+        <div className="max-w-4xl mx-auto">
           
           {/* Doctor Bio */}
-          <div className="order-1 md:order-2 space-y-4 text-slate-700 leading-relaxed">
+          <div className="space-y-4 text-slate-700 leading-relaxed text-center md:text-left">
             <p>
               Dr. Judah Greenberg grew up in Dallas, TX and earned his undergraduate and medical degrees from the University of Pennsylvania. After spending 8 long, cold winters in Philadelphia, Dr. Greenberg decided that it was time to make his way back down south (fortunately, his new wife agreed), and completed his residency in internal medicine at Emory in Atlanta.
             </p>

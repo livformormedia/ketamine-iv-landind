@@ -21,14 +21,14 @@ export default function FloatingCTA({ onOpenAssessment }) {
         <Button
           size="lg"
           onClick={onOpenAssessment}
-          className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl animate-pulse hover:animate-none transform hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group"
+          className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group"
         >
-          {/* Glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-500 opacity-75 blur-xl group-hover:opacity-100 transition-opacity" />
+          {/* Gentle radial glow effect */}
+          <div className="absolute inset-0 bg-purple-400/30 rounded-2xl animate-ping-slow" style={{ animationDuration: '3s' }} />
           
           {/* Button content */}
-          <span className="text-2xl text-base relative flex items-center justify-center gap-3">
-            Take the Free 2-Minute Assessment
+          <span className="relative flex items-center justify-center gap-3">
+            See if you're a good candidate
           </span>
         </Button>
       </div>
