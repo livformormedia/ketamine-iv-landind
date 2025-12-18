@@ -8,6 +8,7 @@ import AboutDoctorSection from "../components/landing-v2/AboutDoctorSection";
 import FinalInvitationSection from "../components/landing-v2/FinalInvitationSection";
 import FloatingCTA from "../components/landing-v2/FloatingCTA";
 import AssessmentModal from "../components/landing-v2/AssessmentModal";
+import CTAButton from "../components/landing-v2/CTAButton";
 
 export default function Home2() {
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
@@ -44,10 +45,14 @@ export default function Home2() {
     <div className="min-h-screen bg-white">
       <AuthorityLogos />
       <HeroSection onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
+      <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <TestimonialsGallery />
+      <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <WhatToExpect />
+      <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <ProofSection />
       <AboutDoctorSection />
+      <CTAButton onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <FinalInvitationSection />
       <FloatingCTA onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <AssessmentModal isOpen={isAssessmentModalOpen} onClose={() => setIsAssessmentModalOpen(false)} />

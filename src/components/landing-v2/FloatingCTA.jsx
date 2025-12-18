@@ -21,10 +21,10 @@ export default function FloatingCTA({ onOpenAssessment }) {
         <Button
           size="lg"
           onClick={onOpenAssessment}
-          className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group"
+          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group"
         >
           {/* Gentle radial glow effect */}
-          <div className="absolute inset-0 bg-purple-400/30 rounded-2xl animate-ping-slow" style={{ animationDuration: '3s' }} />
+          <div className="absolute inset-0 bg-orange-400/30 rounded-2xl animate-ping-slow" style={{ animationDuration: '3s' }} />
           
           {/* Button content */}
           <span className="relative flex items-center justify-center gap-3">

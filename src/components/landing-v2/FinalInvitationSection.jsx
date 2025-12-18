@@ -37,29 +37,8 @@ export default function FinalInvitationSection() {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Douglas Testimonial Card */}
-          <div className="bg-gradient-to-br from-purple-900/50 to-slate-900/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-purple-500/30">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              {treatmentConfig.FINAL_INVITATION_TESTIMONIAL_HEADLINE}
-            </h3>
-            <p className="text-lg text-slate-200 mb-8 text-center">
-              {treatmentConfig.FINAL_INVITATION_TESTIMONIAL_SUBTEXT}
-            </p>
-            
-            <img 
-              src={treatmentConfig.FINAL_INVITATION_TESTIMONIAL_IMAGE_URL}
-              alt="Patient testimonial"
-              className="w-full rounded-2xl shadow-xl border-2 border-purple-500/30"
-            />
-            
-            <p className="text-sm text-slate-400 text-center mt-6">
-              {treatmentConfig.FINAL_INVITATION_FOOTER_NOTE}
-            </p>
-          </div>
-          
-          {/* Location Info */}
-          <div>
+        {/* Location Info - Centered */}
+        <div className="max-w-2xl mx-auto">
             <div className="bg-gradient-to-br from-slate-900/80 to-purple-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-8 shadow-2xl border-2 border-purple-500/30">
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -93,17 +72,18 @@ export default function FinalInvitationSection() {
               </div>
             </div>
             
-            {/* Map */}
-            <div className="rounded-3xl overflow-hidden shadow-2xl h-80 border-2 border-purple-500/30">
-              <iframe
-                src={clinicConfig.GOOGLE_MAPS_EMBED_URL}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
-            </div>
+          {/* Map */}
+          <div className="rounded-3xl overflow-hidden shadow-2xl h-80 border-2 border-purple-500/30">
+            <iframe
+              src={clinicConfig.GOOGLE_MAPS_EMBED_URL}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Clinic Location Map"
+            ></iframe>
           </div>
         </div>
       </div>
