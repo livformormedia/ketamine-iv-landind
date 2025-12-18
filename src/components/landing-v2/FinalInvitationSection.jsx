@@ -1,4 +1,3 @@
-
 import React from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import clinicConfig from "@/components/config/clinicConfig";
@@ -59,25 +58,10 @@ export default function FinalInvitationSection() {
             </p>
           </div>
           
-          {/* Doctor & Location Info */}
+          {/* Location Info */}
           <div>
             <div className="bg-gradient-to-br from-slate-900/80 to-purple-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-8 shadow-2xl border-2 border-purple-500/30">
-              <div className="flex items-start gap-6 mb-8">
-                <img 
-                  src={clinicConfig.MEDICAL_DIRECTOR_PHOTO_URL}
-                  alt="Medical Director"
-                  className="w-32 h-32 rounded-full shadow-lg border-4 border-purple-500/50"
-                />
-                <div>
-                  <h4 className="text-2xl font-bold mb-2">{clinicConfig.MEDICAL_DIRECTOR_NAME}</h4>
-                  <p className="text-slate-300 mb-4">{clinicConfig.MEDICAL_DIRECTOR_TITLE}</p>
-                  <p className="text-slate-200">
-                    "{clinicConfig.MEDICAL_DIRECTOR_QUOTE}"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 border-t border-purple-500/30 pt-6">
+              <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                   <div>

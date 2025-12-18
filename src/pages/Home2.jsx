@@ -48,6 +48,7 @@ export default function Home2() {
       <WhatToExpect />
       <ProofSection />
       <AboutDoctorSection />
+      <FinalInvitationSection />
       <FloatingCTA onOpenAssessment={() => setIsAssessmentModalOpen(true)} />
       <AssessmentModal isOpen={isAssessmentModalOpen} onClose={() => setIsAssessmentModalOpen(false)} />
     </div>
