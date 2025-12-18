@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function CTAButton({ onOpenAssessment }) {
   return (
-    <div className="text-center py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
       <Button
         size="lg"
         onClick={onOpenAssessment}

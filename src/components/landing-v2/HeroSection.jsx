@@ -34,14 +34,14 @@ export default function HeroSection({ onOpenAssessment }) {
             <Button 
               size="lg"
               onClick={onOpenAssessment}
-              className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto"
             >
               <span className="flex items-center justify-center gap-2">
-                <span className="whitespace-nowrap">{treatmentConfig.HERO_CTA_TEXT}</span>
+                <span className="whitespace-nowrap">See if you're a good candidate</span>
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
               </span>
             </Button>
-            
+
             <p className="text-sm text-slate-600 text-center">
               {treatmentConfig.HERO_CTA_SUBTEXT}
             </p>
