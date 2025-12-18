@@ -27,8 +27,9 @@ export default function FloatingCTA({ onOpenAssessment }) {
           <div className="absolute inset-0 bg-orange-400/30 rounded-2xl animate-ping-slow" style={{ animationDuration: '3s' }} />
           
           {/* Button content */}
-          <span className="relative flex items-center justify-center gap-3">
-            See if you're a good candidate
+          <span className="relative flex flex-col items-center justify-center gap-1">
+            <span>Start healing today</span>
+            <span className="text-sm md:text-base font-normal">Take the 30 second quiz</span>
           </span>
         </Button>
       </div>

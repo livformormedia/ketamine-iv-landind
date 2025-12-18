@@ -18,10 +18,7 @@ const faqItems = [
     question: "What conditions does IV Ketamine treat?",
     answer: "IV Ketamine has shown effectiveness for:\n• Treatment-resistant depression\n• Major depressive disorder\n• Anxiety disorders\n• PTSD\n• OCD\n• Chronic pain conditions\n• Suicidal ideation"
   },
-  {
-    question: "How is IV Ketamine different from Spravato?",
-    answer: "Spravato (esketamine) is a nasal spray that's FDA-approved specifically for treatment-resistant depression. IV Ketamine uses the full ketamine molecule administered intravenously. Both work similarly, but IV Ketamine offers more flexible dosing and has been used off-label for longer. Spravato is more likely to be covered by insurance."
-  },
+
   {
     question: "How quickly does IV Ketamine work?",
     answer: "Many patients notice improvements within 1-4 hours after their first infusion, though some may need 2-3 sessions before experiencing relief. This is significantly faster than traditional antidepressants, which can take 4-8 weeks."
@@ -44,7 +41,7 @@ const faqItems = [
   },
   {
     question: "Does insurance cover IV Ketamine?",
-    answer: "Most insurance plans do not currently cover IV Ketamine for mental health treatment, as it's used off-label. However, some plans may cover portions of the visit. We can provide documentation for potential reimbursement. Spravato (nasal esketamine) is more likely to be covered by insurance."
+    answer: "Most insurance plans do not currently cover IV Ketamine for mental health treatment, as it's used off-label. However, some plans may cover portions of the visit. We can provide documentation for potential reimbursement."
   },
   {
     question: "How much does IV Ketamine cost?",
@@ -68,7 +65,7 @@ const faqItems = [
   },
   {
     question: "Is IV Ketamine FDA-approved?",
-    answer: "IV Ketamine is FDA-approved as an anesthetic but is used off-label for mental health treatment. This is common in medicine—many effective treatments are used off-label based on strong research evidence. Spravato (esketamine nasal spray) is FDA-approved specifically for treatment-resistant depression."
+    answer: "IV Ketamine is FDA-approved as an anesthetic but is used off-label for mental health treatment. This is common in medicine—many effective treatments are used off-label based on strong research evidence."
   },
   {
     question: "What should I do to prepare for treatment?",
