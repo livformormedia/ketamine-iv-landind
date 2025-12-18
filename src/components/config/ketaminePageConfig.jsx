@@ -3,16 +3,48 @@ export default {
   TREATMENT_TYPE_SHORT: "ketamine therapy",
   
   // Hero Section
-  HERO_HEADLINE_PART1: "Is Treatment-Resistant",
-  HERO_HEADLINE_PART2: "Depression",
-  HERO_HEADLINE_PART3: "Actually Untreatable?",
-  HERO_SUBHEADLINE: "A groundbreaking, pill-free treatment — studied in <strong>400+ clinical trials</strong> — is proving otherwise. If you've been struggling, this may be the solution for you.",
-  HERO_TRUST_INDICATOR1_TEXT: "FDA-Cleared",
-  HERO_TRUST_INDICATOR2_TEXT: "400+ Studies",
-  HERO_TRUST_INDICATOR3_TEXT: "70% Success",
+  HERO_HEADLINE: "How 1 Round of IV Ketamine Shifts the Brain from Depressed/Anxious to Hopeful in 3 Weeks — or Your Money Back!*",
+  HERO_SUBHEADLINE: "See a 75% Reduction In Anxiety and Depression Symptoms",
+  HERO_DISCLAIMER: "*If you receive 2 out of your 6 infusions, do NOT experience improvement, and wish to discontinue, we will refund the entire package cost!",
   HERO_CTA_TEXT: "👉 Take the Free Assessment",
   HERO_CTA_SUBTEXT: "✓ 2 minutes · ✓ Confidential · ✓ No commitment",
-  HERO_TESTIMONIAL_IMAGE_URL: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/a926493a4_image.png",
+  
+  // Testimonials Section (Images from Google Reviews)
+  TESTIMONIALS_HEADLINE: "We love to speak with results, here's what our patients are saying",
+  TESTIMONIAL_IMAGES: [
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/f063f33b5_WhatsAppImage2025-12-18at1328211.jpg",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/38bb3cd35_WhatsAppImage2025-12-18at132821.jpg",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/fe2ef6d39_WhatsAppImage2025-12-18at1328201.jpg",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/4e6c6ebda_WhatsAppImage2025-12-18at132820.jpg",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/286df1125_WhatsAppImage2025-12-18at1328192.jpg",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/564476657_WhatsAppImage2025-12-18at1328191.jpg",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/79ecdb1f4_WhatsAppImage2025-12-18at132819.jpg"
+  ],
+  
+  // What to Expect Section
+  WHAT_TO_EXPECT_HEADLINE: "Here's What You'll Get at Your Visit",
+  WHAT_TO_EXPECT_ITEMS: [
+    {
+      title: "Rapid Symptom Relief",
+      description: "Experience significant improvement in anxiety and depression symptoms within 2-3 weeks."
+    },
+    {
+      title: "Immediate Emotional Lightness",
+      description: "Feel lighter and relieved, as if a weight has been lifted off your shoulders, often after the 1st or 2nd treatment."
+    },
+    {
+      title: "Enhanced Resiliency",
+      description: "Boost your ability to cope with daily stressors and challenges."
+    },
+    {
+      title: "Positive Observable Changes",
+      description: "Noticeable improvements in mood and demeanor, recognized by both you and those around you."
+    },
+    {
+      title: "Suicidal Thought Management",
+      description: "Receive effective support for managing and reducing suicidal thoughts in a serene, calming environment."
+    }
+  ],
   
   // Problem Section
   PROBLEM_IMAGE_URL: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/f5f8ad11b_32997.jpg",

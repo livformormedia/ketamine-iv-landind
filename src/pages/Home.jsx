@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import AuthorityLogos from "../components/landing-v2/AuthorityLogos";
 import HeroSection from "../components/landing-v2/HeroSection";
@@ -47,13 +46,11 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <AuthorityLogos />
       <HeroSection />
-      <ProblemSection />
-      <WhyItFailsSection />
-      <BreakthroughSection />
+      <TestimonialsGallery />
+      <WhatToExpect />
       <HowItWorksSection />
       <ProofSection />
       <ProcessSection />
-      <ComparisonSection />
       <PricingSection />
       <FAQSection />
       <FinalInvitationSection />

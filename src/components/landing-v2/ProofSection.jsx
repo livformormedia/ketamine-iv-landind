@@ -1,11 +1,10 @@
-
 import React from "react";
 import { Star } from "lucide-react";
 import treatmentConfig from "@/components/config/ketaminePageConfig";
 
 export default function ProofSection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-950 to-purple-900 text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       {/* Decorative glow */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
@@ -21,8 +20,8 @@ export default function ProofSection() {
         </div>
 
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2">
-            {treatmentConfig.PROOF_HEADLINE_PART1} <span className="text-amber-400">{treatmentConfig.PROOF_HEADLINE_PART2}</span>.<br />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 text-slate-900">
+            {treatmentConfig.PROOF_HEADLINE_PART1} <span className="text-purple-600">{treatmentConfig.PROOF_HEADLINE_PART2}</span>.<br />
             {treatmentConfig.PROOF_HEADLINE_PART3}
           </h2>
         </div>
