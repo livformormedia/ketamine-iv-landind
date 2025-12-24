@@ -3,9 +3,9 @@ export default {
   TREATMENT_TYPE_SHORT: "ketamine therapy",
   
   // Hero Section
-  HERO_HEADLINE: "How 1 Round of IV Ketamine Shifts the Brain from Depressed/Anxious to Hopeful in 3 Weeks — or Your Money Back!*",
-  HERO_SUBHEADLINE: "See a 75% Reduction In Anxiety and Depression Symptoms",
-  HERO_DISCLAIMER: "*If you receive 2 out of your 6 infusions, do NOT experience improvement, and wish to discontinue, we will refund the entire package cost!",
+  HERO_HEADLINE: "How One IV Ketamine Treatment Can Help Shift Your Brain from Depressed/Anxious to Hopeful in as Little as 3 Weeks — or Your Money Back!*",
+  HERO_SUBHEADLINE: "90% of our patients have experienced an improvement in depression and anxiety",
+  HERO_DISCLAIMER: "*If you complete 2 of the 6 infusions, experience no improvement, and choose to discontinue, we'll refund 100% of the package price.",
   HERO_CTA_TEXT: "👉 Take the Free Assessment",
   HERO_CTA_SUBTEXT: "✓ 2 minutes · ✓ Confidential · ✓ No commitment",
   
@@ -326,10 +326,10 @@ export default {
   // Final Invitation Section
   FINAL_INVITATION_IMAGE_URL: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=600&fit=crop",
   FINAL_INVITATION_HEADLINE_PART1: "You're Not Broken.",
-  FINAL_INVITATION_HEADLINE_PART2: "You Just Haven't Had",
-  FINAL_INVITATION_HEADLINE_PART3: "the Right Kind of Help.",
-  FINAL_INVITATION_SUBHEADLINE_PART1: "If you've done everything \"right\" and still felt stuck, you know how painful it is to wonder if healing is even possible.",
-  FINAL_INVITATION_SUBHEADLINE_PART2: "This treatment may be your chance to finally feel like yourself again.",
+  FINAL_INVITATION_HEADLINE_PART2: "You're Ready for a",
+  FINAL_INVITATION_HEADLINE_PART3: "New Way Forward.",
+  FINAL_INVITATION_SUBHEADLINE_PART1: "If you've done all the \"right\" things and still feel stuck, you know how discouraging it is to wonder whether real healing is possible.",
+  FINAL_INVITATION_SUBHEADLINE_PART2: "This treatment may be the turning point that helps you feel like yourself again.",
   FINAL_INVITATION_TESTIMONIAL_HEADLINE: "Real Results from Real People",
   FINAL_INVITATION_TESTIMONIAL_SUBTEXT: "See what others are saying about their transformation.",
   FINAL_INVITATION_TESTIMONIAL_IMAGE_URL: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/8c0514f44_image.png",

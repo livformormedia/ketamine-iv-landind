@@ -5,11 +5,11 @@ import treatmentConfig from "@/components/config/ketaminePageConfig";
 
 export default function HeroSection({ onOpenAssessment }) {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#352253]/5 via-white to-[#ec9e21]/5 overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#352253] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#ec9e21] rounded-full blur-3xl"></div>
       </div>
       
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
@@ -20,7 +20,7 @@ export default function HeroSection({ onOpenAssessment }) {
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 text-purple-700 font-semibold">
+          <p className="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 text-[#352253] font-semibold">
             {treatmentConfig.HERO_SUBHEADLINE}
           </p>
           
@@ -47,10 +47,9 @@ export default function HeroSection({ onOpenAssessment }) {
             <Button 
               size="lg"
               onClick={onOpenAssessment}
-              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl flex flex-col items-center gap-1"
+              className="w-full bg-gradient-to-r from-[#ec9e21] to-[#ec9e21]/90 hover:from-[#ec9e21]/90 hover:to-[#ec9e21]/80 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl"
             >
-              <span>Start Healing Today</span>
-              <span className="text-sm md:text-base font-normal">Take the 30 second quiz</span>
+              Take the First Step Toward Healing Today
             </Button>
           </div>
         </div>

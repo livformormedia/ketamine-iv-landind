@@ -22,7 +22,19 @@ export default function AboutDoctorSection() {
           {/* Doctor Bio */}
           <div className="space-y-4 text-slate-700 leading-relaxed text-center md:text-left">
             <p>
-              Dr. Judah Greenberg earned his medical degree from the University of Pennsylvania and completed his residency at Emory. He's board-certified in Internal Medicine and Dermatology, with experience ranging from the ICU to the ER. After witnessing the transformative power of ketamine therapy, he brought this breakthrough treatment to Middle Georgia. He lives in Macon with his wife and 6 children.
+              Dr. Judah Greenberg grew up in Dallas, Texas, and earned both his undergraduate and medical degrees from the University of Pennsylvania. After eight Philadelphia winters, he headed back South and completed his internal medicine residency at Emory University in Atlanta (with his new wife happily on board).
+            </p>
+
+            <p>
+              He went on to practice in the emergency department at the Atlanta VA Medical Center and later trained in dermatology and skin surgery. During his internal medicine training, he developed a deep appreciation for how closely mental health is tied to overall well-being—an outlook that continues to shape his whole-person approach to care.
+            </p>
+
+            <p>
+              While practicing dermatology and skin cancer surgery in Middle Georgia, Dr. Greenberg maintained a strong interest in psychopharmacology and closely followed the growing medical research on ketamine therapy. After seeing firsthand how powerfully ketamine can help people struggling with mental health conditions and chronic pain, he made it his mission to bring this treatment to the Middle Georgia community.
+            </p>
+
+            <p>
+              Dr. Greenberg is triple board-certified in Internal Medicine, Dermatology, and Micrographic Dermatologic Surgery. He lives in Macon with his wife and six energetic children.
             </p>
           </div>
         </div>
