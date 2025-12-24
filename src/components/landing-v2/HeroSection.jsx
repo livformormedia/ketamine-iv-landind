@@ -15,7 +15,7 @@ export default function HeroSection({ onOpenAssessment }) {
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight text-slate-900">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight text-[#352253]">
             {treatmentConfig.HERO_HEADLINE}
           </h1>
           
