@@ -6,8 +6,8 @@ export default function ProofSection() {
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       {/* Decorative glow */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#ec9e21]/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[#352253]/20 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* FDA Image */}
@@ -21,7 +21,7 @@ export default function ProofSection() {
 
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 text-slate-900">
-            {treatmentConfig.PROOF_HEADLINE_PART1} <span className="text-purple-600">{treatmentConfig.PROOF_HEADLINE_PART2}</span>.<br />
+            {treatmentConfig.PROOF_HEADLINE_PART1} <span className="text-[#352253]">{treatmentConfig.PROOF_HEADLINE_PART2}</span>.<br />
             {treatmentConfig.PROOF_HEADLINE_PART3}
           </h2>
         </div>
@@ -29,8 +29,8 @@ export default function ProofSection() {
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {treatmentConfig.PROOF_STATS.map((stat, index) => (
-            <div key={index} className="bg-white border-2 border-purple-200 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all">
-              <div className="text-4xl md:text-5xl font-bold text-purple-700 mb-2">
+            <div key={index} className="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all">
+              <div className="text-4xl md:text-5xl font-bold text-[#352253] mb-2">
                 {stat.number}
               </div>
               <p className="text-sm md:text-lg text-slate-700">{stat.description}</p>
@@ -39,7 +39,7 @@ export default function ProofSection() {
         </div>
         
         {/* Research Institutions */}
-        <div className="bg-white border-2 border-purple-200 rounded-3xl p-6 md:p-8 mb-12 md:mb-16 shadow-lg">
+        <div className="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 mb-12 md:mb-16 shadow-lg">
           <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-slate-900">Research Institutions</h3>
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-16">
             {treatmentConfig.PROOF_RESEARCH_INSTITUTIONS.map((institution, index) => (

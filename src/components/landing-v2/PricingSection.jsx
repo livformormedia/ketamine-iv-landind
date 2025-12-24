@@ -4,7 +4,7 @@ import treatmentConfig from "@/components/config/ketaminePageConfig";
 
 export default function PricingSection() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-purple-900 to-slate-900 text-white">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-[#352253] to-slate-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -22,7 +22,7 @@ export default function PricingSection() {
               </div>
               <h3 className="text-3xl font-bold mb-4">{treatmentConfig.PRICING_PACKAGE_NAME}</h3>
               <div className="flex items-end justify-center gap-2">
-                <span className="text-6xl md:text-7xl font-bold text-purple-600">{treatmentConfig.PRICING_AMOUNT}</span>
+                <span className="text-6xl md:text-7xl font-bold text-[#352253]">{treatmentConfig.PRICING_AMOUNT}</span>
               </div>
               <p className="text-xl text-slate-600 mt-4" dangerouslySetInnerHTML={{ __html: treatmentConfig.PRICING_PER_DAY }} />
               <p className="text-slate-500 mt-2">
