@@ -56,8 +56,8 @@ export default function ThankYou() {
 
             {/* Header Section */}
             <div className="px-8 py-12 text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#3B2820] mb-4 leading-tight">
-                You Are One <span className="text-[#d97706] underline decoration-[#FFD700]">Final Step</span> Away.
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#352253] mb-4 leading-tight">
+                You Are One <span className="text-[#ec9e21] underline decoration-[#ec9e21]">Final Step</span> Away.
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-4 font-medium">
@@ -94,11 +94,11 @@ export default function ThankYou() {
 
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4">
-                  <div className="text-[#4ECDC4] flex-shrink-0 mt-1">
+                  <div className="text-[#ec9e21] flex-shrink-0 mt-1">
                     <Check className="w-6 h-6 stroke-[2.5]" />
                   </div>
                   <div>
-                    <strong className="text-[#3B2820] text-lg block mb-1">Instant Confirmation</strong>
+                    <strong className="text-[#352253] text-lg block mb-1">Instant Confirmation</strong>
                     <p className="text-sm text-gray-600">
                       Secure your spot in our program before we reach capacity for the month.
                     </p>
@@ -106,11 +106,11 @@ export default function ThankYou() {
                 </div>
 
                 <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4">
-                  <div className="text-[#4ECDC4] flex-shrink-0 mt-1">
+                  <div className="text-[#ec9e21] flex-shrink-0 mt-1">
                     <Shield className="w-6 h-6 stroke-[2.5]" />
                   </div>
                   <div>
-                    <strong className="text-[#3B2820] text-lg block mb-1">Insurance Verification</strong>
+                    <strong className="text-[#352253] text-lg block mb-1">Insurance Verification</strong>
                     <p className="text-sm text-gray-600">
                       We will verify your benefits during this call so you know exactly what is covered.
                     </p>
