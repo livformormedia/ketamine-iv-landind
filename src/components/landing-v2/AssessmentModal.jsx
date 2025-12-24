@@ -243,7 +243,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
             <p className="text-lg text-slate-600 mb-8">
               {disqualificationReason}
             </p>
-            <Button onClick={onClose} className="bg-purple-600 hover:bg-purple-700">
+            <Button onClick={onClose} className="bg-[#352253] hover:bg-[#352253]/90">
               Close
             </Button>
           </div>
@@ -257,7 +257,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
               </div>
               <div className="w-full bg-slate-700 rounded-full h-2">
                 <div 
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-300"
+                  className="bg-gradient-to-r from-[#352253] to-[#ec9e21] h-2 rounded-full transition-all duration-300"
                   style={{ width: `${(step / 6) * 100}%` }}
                 />
               </div>
@@ -270,11 +270,11 @@ export default function AssessmentModal({ isOpen, onClose }) {
                   <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Do you live in Georgia?</h2>
                   <RadioGroup value={formData.lives_in_georgia} onValueChange={(value) => setFormData({...formData, lives_in_georgia: value})}>
                     <div className="space-y-4">
-                      <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                      <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                         <RadioGroupItem value="yes" id="georgia-yes" />
                         <Label htmlFor="georgia-yes" className="text-lg cursor-pointer flex-1">Yes</Label>
                       </div>
-                      <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                      <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                         <RadioGroupItem value="no" id="georgia-no" />
                         <Label htmlFor="georgia-no" className="text-lg cursor-pointer flex-1">No</Label>
                       </div>
@@ -299,15 +299,15 @@ export default function AssessmentModal({ isOpen, onClose }) {
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">Ketamine Therapy is Not Covered by Insurance</h3>
                     <p className="text-slate-600 mb-6">
-                      I understand that ketamine therapy is not covered by insurance and is an out-of-pocket investment in my health.
+                      I understand that ketamine therapy is not covered by insurance and is an out-of-pocket investment in my mental health and future success.
                     </p>
                     <RadioGroup value={formData.insurance_acknowledgment} onValueChange={(value) => setFormData({...formData, insurance_acknowledgment: value})}>
                       <div className="space-y-4">
-                        <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                        <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                           <RadioGroupItem value="yes" id="insurance-yes" />
                           <Label htmlFor="insurance-yes" className="text-lg cursor-pointer flex-1">YES</Label>
                         </div>
-                        <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                        <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                           <RadioGroupItem value="no" id="insurance-no" />
                           <Label htmlFor="insurance-no" className="text-lg cursor-pointer flex-1">NO (exit survey)</Label>
                         </div>
@@ -332,7 +332,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
                       { value: "chronic_nerve_pain", label: "Chronic Nerve Pain" },
                       { value: "other", label: "Other" }
                     ].map((option) => (
-                      <div key={option.value} className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                      <div key={option.value} className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                         <Checkbox 
                           id={option.value}
                           checked={formData.struggling_with.includes(option.value)}
@@ -358,7 +358,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
                       { value: "increase_motivation", label: "Increase motivation and drive" },
                       { value: "process_trauma", label: "Process past trauma" }
                     ].map((option) => (
-                      <div key={option.value} className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                      <div key={option.value} className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                         <Checkbox 
                           id={option.value}
                           checked={formData.treatment_goals.includes(option.value)}
@@ -386,7 +386,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
                       { value: "heart_failure", label: "I have had congestive heart failure" },
                       { value: "aneurysm_stroke", label: "I have had an aneurysm or hemorrhagic stroke" }
                     ].map((option) => (
-                      <div key={option.value} className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                      <div key={option.value} className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                         <Checkbox 
                           id={option.value}
                           checked={formData.medical_history.includes(option.value)}
@@ -395,7 +395,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
                         <Label htmlFor={option.value} className="text-lg cursor-pointer flex-1">{option.label}</Label>
                       </div>
                     ))}
-                    <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-purple-500 transition-colors cursor-pointer">
+                    <div className="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer">
                       <Checkbox 
                         id="none"
                         checked={formData.medical_history.includes("none")}
@@ -478,7 +478,7 @@ export default function AssessmentModal({ isOpen, onClose }) {
                 <Button 
                   onClick={handleNext}
                   disabled={!canProceed() || isSubmitting}
-                  className="ml-auto bg-purple-600 hover:bg-purple-700 flex items-center gap-2"
+                  className="ml-auto bg-[#ec9e21] hover:bg-[#ec9e21]/90 flex items-center gap-2"
                 >
                   {isSubmitting ? "Submitting..." : (step === 6 ? "Submit" : "Next")}
                   <ArrowRight className="w-4 h-4" />
