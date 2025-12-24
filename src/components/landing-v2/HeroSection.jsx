@@ -16,7 +16,7 @@ export default function HeroSection({ onOpenAssessment }) {
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight text-[#352253]">
-            How One IV Ketamine Treatment Can Help Shift Your Brain from Depressed/Anxious to Hopeful in as Little as 3 Weeks — <span className="bg-[#ec9e21] px-2 py-1 rounded">or Your Money Back!*</span>
+            {treatmentConfig.HERO_HEADLINE}
           </h1>
           
           {/* Subheadline */}
