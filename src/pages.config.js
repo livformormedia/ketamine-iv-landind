@@ -1,17 +1,17 @@
-import Home from './pages/Home';
 import Assessment from './pages/Assessment';
-import assessment from './pages/assessment';
-import ThankYou from './pages/ThankYou';
+import Home from './pages/Home';
 import Home2 from './pages/Home2';
+import ThankYou from './pages/ThankYou';
+import assessment from './pages/assessment';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
-    "Home": Home,
     "Assessment": Assessment,
-    "assessment": assessment,
-    "ThankYou": ThankYou,
+    "Home": Home,
     "Home2": Home2,
+    "ThankYou": ThankYou,
+    "assessment": assessment,
 }
 
 export const pagesConfig = {
