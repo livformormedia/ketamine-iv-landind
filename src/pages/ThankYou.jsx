@@ -72,7 +72,7 @@ export default function ThankYou() {
             {/* Calendar Wrapper */}
             <div className="w-full bg-white border-t border-b border-gray-200" style={{ minHeight: '800px' }}>
               <iframe 
-                src="https://api.leadconnectorhq.com/widget/bookings/kccg-calls-1"
+                src="https://api.leadconnectorhq.com/widget/bookings/kccg-calls-1tv4yjl"
                 scrolling="yes" 
                 id="booking-calendar" 
                 title="Book Discovery Call"
