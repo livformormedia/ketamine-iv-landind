@@ -6,7 +6,7 @@ export default function WhatToExpect() {
   return (
     <section className="py-16 md:py-20 bg-gradient-to-br from-[#352253]/5 to-[#ec9e21]/5">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12 md:mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#352253] mb-12 md:mb-16">
           {treatmentConfig.WHAT_TO_EXPECT_HEADLINE}
         </h2>
         
@@ -21,10 +21,10 @@ export default function WhatToExpect() {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-xl font-bold text-[#352253] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-[#352253]/70 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

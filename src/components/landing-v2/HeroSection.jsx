@@ -25,7 +25,7 @@ export default function HeroSection({ onOpenAssessment }) {
           </p>
           
           {/* Disclaimer */}
-          <p className="text-sm md:text-base mb-8 md:mb-10 text-slate-600 max-w-3xl mx-auto">
+          <p className="text-sm md:text-base mb-8 md:mb-10 text-[#352253]/70 max-w-3xl mx-auto">
             {treatmentConfig.HERO_DISCLAIMER}
           </p>
           

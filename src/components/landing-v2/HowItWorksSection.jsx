@@ -6,11 +6,11 @@ export default function HowItWorksSection() {
     <section className="py-20 md:py-32 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#352253] mb-6">
             {treatmentConfig.HOW_IT_WORKS_HEADLINE_PART1}<br />
             <span className="text-[#352253]">{treatmentConfig.HOW_IT_WORKS_HEADLINE_PART2}</span>
           </h2>
-          <p className="text-xl text-slate-600">
+          <p className="text-xl text-[#352253]/70">
             {treatmentConfig.HOW_IT_WORKS_SUBHEADLINE}
           </p>
         </div>
@@ -26,8 +26,8 @@ export default function HowItWorksSection() {
                   <div className="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#352253]/80 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">
                     {step.number}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-bold text-[#352253] mb-3">{step.title}</h3>
+                  <p className="text-[#352253]/70 leading-relaxed">{step.description}</p>
                 </div>
                 {index < treatmentConfig.HOW_IT_WORKS_STEPS.length - 1 && (
                   <div className="hidden lg:block absolute top-8 -right-4 w-8 h-8 text-[#352253]">
@@ -45,8 +45,8 @@ export default function HowItWorksSection() {
         <div className="mt-16 bg-white rounded-2xl p-8 shadow-xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">What to Expect</h3>
-              <ul className="space-y-4 text-slate-700">
+              <h3 className="text-2xl font-bold text-[#352253] mb-4">What to Expect</h3>
+              <ul className="space-y-4 text-[#352253]/80">
                 {treatmentConfig.HOW_IT_WORKS_WHAT_TO_EXPECT.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">

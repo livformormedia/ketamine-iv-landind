@@ -13,14 +13,14 @@ export default function AboutDoctorSection() {
           />
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#352253] mb-8 md:mb-12">
           About Dr. Judah Greenberg
         </h2>
         
         <div className="max-w-4xl mx-auto">
           
           {/* Doctor Bio */}
-          <div className="space-y-4 text-slate-700 leading-relaxed text-center md:text-left">
+          <div className="space-y-4 text-[#352253]/80 leading-relaxed text-center md:text-left">
             <p>
               Dr. Judah Greenberg grew up in Dallas, Texas, and earned both his undergraduate and medical degrees from the University of Pennsylvania. After eight Philadelphia winters, he headed back South and completed his internal medicine residency at Emory University in Atlanta (with his new wife happily on board).
             </p>

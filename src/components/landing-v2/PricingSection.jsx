@@ -15,7 +15,7 @@ export default function PricingSection() {
         
         <div className="max-w-3xl mx-auto">
           {/* Main Pricing Card */}
-          <div className="bg-white rounded-3xl p-8 md:p-12 text-slate-900 shadow-2xl mb-8">
+          <div className="bg-white rounded-3xl p-8 md:p-12 text-[#352253] shadow-2xl mb-8">
             <div className="text-center mb-8">
               <div className="inline-block bg-amber-100 text-amber-800 px-6 py-2 rounded-full font-semibold mb-6">
                 {treatmentConfig.PRICING_PACKAGE_BADGE}
@@ -24,8 +24,8 @@ export default function PricingSection() {
               <div className="flex items-end justify-center gap-2">
                 <span className="text-6xl md:text-7xl font-bold text-[#352253]">{treatmentConfig.PRICING_AMOUNT}</span>
               </div>
-              <p className="text-xl text-slate-600 mt-4" dangerouslySetInnerHTML={{ __html: treatmentConfig.PRICING_PER_DAY }} />
-              <p className="text-slate-500 mt-2">
+              <p className="text-xl text-[#352253]/70 mt-4" dangerouslySetInnerHTML={{ __html: treatmentConfig.PRICING_PER_DAY }} />
+              <p className="text-[#352253]/60 mt-2">
                 {treatmentConfig.PRICING_COMPARISON}
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function PricingSection() {
               </ul>
             </div>
             
-            <p className="text-center text-sm text-slate-500 mt-4">
+            <p className="text-center text-sm text-[#352253]/60 mt-4">
               {treatmentConfig.PRICING_FOOTER_NOTE}
             </p>
           </div>

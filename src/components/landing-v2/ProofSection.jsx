@@ -20,7 +20,7 @@ export default function ProofSection() {
         </div>
 
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 text-slate-900">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 text-[#352253]">
             {treatmentConfig.PROOF_HEADLINE_PART1} <span className="text-[#352253]">{treatmentConfig.PROOF_HEADLINE_PART2}</span>.<br />
             {treatmentConfig.PROOF_HEADLINE_PART3}
           </h2>
@@ -33,17 +33,17 @@ export default function ProofSection() {
               <div className="text-4xl md:text-5xl font-bold text-[#352253] mb-2">
                 {stat.number}
               </div>
-              <p className="text-sm md:text-lg text-slate-700">{stat.description}</p>
+              <p className="text-sm md:text-lg text-[#352253]/80">{stat.description}</p>
             </div>
           ))}
         </div>
         
         {/* Research Institutions */}
         <div className="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 mb-12 md:mb-16 shadow-lg">
-          <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-slate-900">Research Institutions</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-[#352253]">Research Institutions</h3>
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-16">
             {treatmentConfig.PROOF_RESEARCH_INSTITUTIONS.map((institution, index) => (
-              <div key={index} className="text-base md:text-xl font-semibold text-slate-700">{institution}</div>
+              <div key={index} className="text-base md:text-xl font-semibold text-[#352253]/80">{institution}</div>
             ))}
           </div>
         </div>
@@ -52,8 +52,8 @@ export default function ProofSection() {
         <div className="bg-white border-2 border-red-200 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-center gap-4 md:gap-6 shadow-lg">
           <div className="text-4xl md:text-6xl font-bold text-red-500">{treatmentConfig.PROOF_MEDIA_OUTLET}</div>
           <div className="text-center sm:text-left">
-            <p className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-slate-900">"{treatmentConfig.PROOF_MEDIA_QUOTE}"</p>
-            <p className="text-sm md:text-base text-slate-600">{treatmentConfig.PROOF_MEDIA_SUBTEXT}</p>
+            <p className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-[#352253]">"{treatmentConfig.PROOF_MEDIA_QUOTE}"</p>
+            <p className="text-sm md:text-base text-[#352253]/70">{treatmentConfig.PROOF_MEDIA_SUBTEXT}</p>
           </div>
         </div>
       </div>
