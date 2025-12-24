@@ -71,16 +71,16 @@ export default function ThankYou() {
               <div className="max-w-2xl mx-auto mt-6 text-left">
                 <ul className="space-y-3 text-base md:text-lg text-gray-700">
                   <li className="flex items-start gap-3">
-                    <span className="text-[#ec9e21] font-bold flex-shrink-0">•</span>
-                    <span>We'll assess your medical history</span>
+                    <span className="text-[#ec9e21] font-bold flex-shrink-0 text-2xl">✓</span>
+                    <span><strong>Discover if you're a candidate</strong> for rapid relief from treatment-resistant depression and anxiety</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#ec9e21] font-bold flex-shrink-0">•</span>
-                    <span>We'll explain about the different options that you have</span>
+                    <span className="text-[#ec9e21] font-bold flex-shrink-0 text-2xl">✓</span>
+                    <span><strong>Get a personalized treatment roadmap</strong> designed specifically for your condition and goals</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#ec9e21] font-bold flex-shrink-0">•</span>
-                    <span>If you're a good fit, we're going to create a customized treatment plan for you based on your needs</span>
+                    <span className="text-[#ec9e21] font-bold flex-shrink-0 text-2xl">✓</span>
+                    <span><strong>Walk away knowing exactly what your path to healing looks like</strong> (and what it costs)</span>
                   </li>
                 </ul>
               </div>
