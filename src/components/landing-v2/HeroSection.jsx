@@ -47,9 +47,12 @@ export default function HeroSection({ onOpenAssessment }) {
             <Button 
               size="lg"
               onClick={onOpenAssessment}
-              className="w-full bg-gradient-to-r from-[#ec9e21] to-[#ec9e21]/90 hover:from-[#ec9e21]/90 hover:to-[#ec9e21]/80 text-white text-lg md:text-2xl px-8 py-8 md:py-10 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl"
+              className="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl"
             >
-              Take the First Step Toward Healing Today
+              <div className="flex flex-col items-center gap-1">
+                <span className="leading-tight">Start Healing Today</span>
+                <span className="text-xs md:text-sm font-normal opacity-90">Take the 30 second quiz</span>
+              </div>
             </Button>
           </div>
         </div>

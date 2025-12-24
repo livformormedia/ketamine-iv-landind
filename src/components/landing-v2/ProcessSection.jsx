@@ -13,7 +13,7 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            {treatmentConfig.PROCESS_HEADLINE_PART1} <span className="text-purple-600">{treatmentConfig.PROCESS_HEADLINE_PART2}</span>
+            {treatmentConfig.PROCESS_HEADLINE_PART1} <span className="text-[#352253]">{treatmentConfig.PROCESS_HEADLINE_PART2}</span>
           </h2>
           <p className="text-xl text-slate-600">
             {treatmentConfig.PROCESS_SUBHEADLINE}
@@ -25,17 +25,17 @@ export default function ProcessSection() {
             <div key={index} className="relative mb-8 last:mb-0">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center text-3xl shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#352253]/80 rounded-full flex items-center justify-center text-3xl shadow-lg">
                     {step.icon}
                   </div>
                 </div>
-                <div className="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-300 transition-colors">
+                <div className="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-[#352253]/30 transition-colors">
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
                   <p className="text-slate-600">{step.description}</p>
                 </div>
               </div>
               {index < treatmentConfig.PROCESS_STEPS.length - 1 && (
-                <div className="ml-8 h-8 w-0.5 bg-purple-200" />
+                <div className="ml-8 h-8 w-0.5 bg-[#352253]/20" />
               )}
             </div>
           ))}
@@ -65,10 +65,12 @@ export default function ProcessSection() {
             <Button 
               size="lg"
               onClick={scrollToAssessment}
-              className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white text-xl px-8 py-6 w-full md:w-auto"
+              className="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-lg px-6 py-5 w-full md:w-auto"
             >
-              Take the Free Assessment
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <div className="flex flex-col items-center gap-1">
+                <span className="leading-tight">Start Healing Today</span>
+                <span className="text-xs font-normal opacity-90">Take the 30 second quiz</span>
+              </div>
             </Button>
           </div>
         </div>

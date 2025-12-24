@@ -1,11 +1,10 @@
-
 import React from "react";
 import { AlertCircle } from "lucide-react";
 import treatmentConfig from "@/components/config/ketaminePageConfig";
 
 export default function WhyItFailsSection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-red-950 via-slate-900 to-purple-950 text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-red-950 via-slate-900 to-[#352253] text-white relative overflow-hidden">
       {/* Decorative glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/20 rounded-full blur-3xl" />
       

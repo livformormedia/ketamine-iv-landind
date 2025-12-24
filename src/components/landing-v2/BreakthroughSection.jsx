@@ -1,14 +1,13 @@
-
 import React from "react";
 import { Sparkles, CheckCircle } from "lucide-react";
 import treatmentConfig from "@/components/config/ketaminePageConfig";
 
 export default function BreakthroughSection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-[#352253] to-slate-900 text-white relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#352253]/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#ec9e21]/20 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Gummy Image */}
@@ -18,7 +17,7 @@ export default function BreakthroughSection() {
             <img 
               src={treatmentConfig.BREAKTHROUGH_IMAGE_PRODUCT_URL}
               alt="Ketamine therapy"
-              className="relative rounded-3xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto border-2 border-purple-500/30"
+              className="relative rounded-3xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto border-2 border-[#352253]/30"
             />
           </div>
         </div>
@@ -41,13 +40,13 @@ export default function BreakthroughSection() {
           <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed">
             <p className="text-slate-300" dangerouslySetInnerHTML={{ __html: treatmentConfig.BREAKTHROUGH_INTRO }} />
             
-            <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#352253] to-[#ec9e21]">
               {treatmentConfig.BREAKTHROUGH_TREATMENT_NAME}
             </p>
             
             <p className="text-slate-300" dangerouslySetInnerHTML={{ __html: treatmentConfig.BREAKTHROUGH_DESCRIPTION }} />
             
-            <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-lg border-2 border-purple-500/30 p-4 md:p-6 rounded-2xl shadow-xl">
+            <div className="bg-gradient-to-br from-[#352253]/50 to-[#ec9e21]/50 backdrop-blur-lg border-2 border-[#352253]/30 p-4 md:p-6 rounded-2xl shadow-xl">
               <p className="font-semibold text-white text-sm md:text-base">
                 {treatmentConfig.BREAKTHROUGH_CALLOUT}
               </p>
@@ -58,7 +57,7 @@ export default function BreakthroughSection() {
             <img 
               src={treatmentConfig.BREAKTHROUGH_IMAGE_SECONDARY_URL}
               alt="At-home treatment"
-              className="rounded-3xl shadow-2xl w-full border-2 border-purple-500/30"
+              className="rounded-3xl shadow-2xl w-full border-2 border-[#352253]/30"
             />
           </div>
         </div>
@@ -67,8 +66,8 @@ export default function BreakthroughSection() {
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {treatmentConfig.BREAKTHROUGH_BENEFITS.map((benefit, index) => (
             <div key={index}>
-              <div className="bg-gradient-to-br from-purple-900/50 to-slate-900/50 backdrop-blur-lg border-2 border-purple-500/30 rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 hover:border-purple-400/50 mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-4 md:mb-6 shadow-lg">
+              <div className="bg-gradient-to-br from-[#352253]/50 to-slate-900/50 backdrop-blur-lg border-2 border-[#352253]/30 rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 hover:border-[#352253]/50 mb-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#352253] to-[#ec9e21] rounded-full flex items-center justify-center mb-4 md:mb-6 shadow-lg">
                   <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{benefit.title}</h3>
@@ -80,7 +79,7 @@ export default function BreakthroughSection() {
                 <img 
                   src={treatmentConfig.BREAKTHROUGH_TESTIMONIAL_IMAGE_URL}
                   alt="Patient testimonial"
-                  className="w-full rounded-2xl shadow-xl border-2 border-purple-500/30"
+                  className="w-full rounded-2xl shadow-xl border-2 border-[#352253]/30"
                 />
               )}
             </div>

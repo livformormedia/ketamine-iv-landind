@@ -1,4 +1,3 @@
-
 import React from "react";
 import { X, Check } from "lucide-react";
 import treatmentConfig from "@/components/config/ketaminePageConfig";
@@ -29,9 +28,9 @@ export default function ComparisonSection() {
   // ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-purple-950 via-slate-900 to-blue-950 relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-[#352253] via-slate-900 to-[#352253]/80 relative overflow-hidden">
       {/* Decorative glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#352253]/20 rounded-full blur-3xl" />
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -44,13 +43,13 @@ export default function ComparisonSection() {
           </p>
         </div>
         
-        <div className="bg-gradient-to-br from-slate-900/80 to-purple-900/80 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border-2 border-purple-500/30">
+        <div className="bg-gradient-to-br from-slate-900/80 to-[#352253]/80 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border-2 border-[#352253]/30">
           {/* Header */}
-          <div className="grid grid-cols-2 bg-gradient-to-r from-slate-900 to-purple-900 text-white border-b-2 border-purple-500/30">
-            <div className="p-6 text-center border-r-2 border-purple-500/30">
+          <div className="grid grid-cols-2 bg-gradient-to-r from-slate-900 to-[#352253] text-white border-b-2 border-[#352253]/30">
+            <div className="p-6 text-center border-r-2 border-[#352253]/30">
               <h3 className="text-xl font-bold">Other Programs</h3>
             </div>
-            <div className="p-6 text-center bg-gradient-to-r from-purple-600 to-purple-800">
+            <div className="p-6 text-center bg-gradient-to-r from-[#352253] to-[#352253]/80">
               <h3 className="text-xl font-bold">Our Program ✓</h3>
             </div>
           </div>
@@ -59,9 +58,9 @@ export default function ComparisonSection() {
           {treatmentConfig.COMPARISON_ITEMS.map((comparison, index) => (
             <div 
               key={index} 
-              className="grid grid-cols-2 border-b border-purple-500/20 last:border-b-0"
+              className="grid grid-cols-2 border-b border-[#352253]/20 last:border-b-0"
             >
-              <div className="p-6 border-r-2 border-purple-500/20 flex items-center gap-3 bg-red-950/20">
+              <div className="p-6 border-r-2 border-[#352253]/20 flex items-center gap-3 bg-red-950/20">
                 <X className="w-6 h-6 text-red-400 flex-shrink-0" />
                 <span className="text-slate-300">{comparison.other}</span>
               </div>
@@ -78,8 +77,8 @@ export default function ComparisonSection() {
           {treatmentConfig.COMPARISON_ADDITIONAL_BENEFITS.map((benefit, index) => {
             const gradients = [
               "from-amber-900/30 to-orange-900/30 border-amber-500/30 hover:border-amber-400/50",
-              "from-blue-900/30 to-purple-900/30 border-blue-500/30 hover:border-blue-400/50",
-              "from-purple-900/30 to-pink-900/30 border-purple-500/30 hover:border-purple-400/50"
+              "from-[#352253]/30 to-[#352253]/50 border-[#352253]/30 hover:border-[#352253]/50",
+              "from-[#ec9e21]/30 to-[#ec9e21]/50 border-[#ec9e21]/30 hover:border-[#ec9e21]/50"
             ];
             
             return (
