@@ -24,15 +24,15 @@ export default function FinalInvitationSection() {
         </div>
 
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2 text-white">
             {treatmentConfig.FINAL_INVITATION_HEADLINE_PART1}<br />
             {treatmentConfig.FINAL_INVITATION_HEADLINE_PART2}<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#352253] to-[#ec9e21]">{treatmentConfig.FINAL_INVITATION_HEADLINE_PART3}</span>
+            {treatmentConfig.FINAL_INVITATION_HEADLINE_PART3}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed px-2">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed px-2">
             {treatmentConfig.FINAL_INVITATION_SUBHEADLINE_PART1}
           </p>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#352253] to-[#ec9e21] font-bold mt-4 md:mt-6 max-w-4xl mx-auto px-2">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mt-4 md:mt-6 max-w-4xl mx-auto px-2">
             {treatmentConfig.FINAL_INVITATION_SUBHEADLINE_PART2}
           </p>
         </div>
@@ -45,14 +45,14 @@ export default function FinalInvitationSection() {
                   <MapPin className="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-white">Location</p>
-                    <p className="text-slate-300">{clinicConfig.CLINIC_ADDRESS_LINE1}<br />{clinicConfig.CLINIC_ADDRESS_LINE2}</p>
+                    <p className="text-slate-300">{clinicConfig.CLINIC_ADDRESS}<br />{clinicConfig.CLINIC_CITY_STATE_ZIP}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-white">Phone</p>
-                    <p className="text-slate-300">{clinicConfig.CLINIC_PHONE_NUMBER}</p>
+                    <p className="text-slate-300">{clinicConfig.CLINIC_PHONE}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -66,7 +66,7 @@ export default function FinalInvitationSection() {
                   <Clock className="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-white">Hours</p>
-                    <p className="text-slate-300">{clinicConfig.CLINIC_HOURS_MON_FRI}<br />{clinicConfig.CLINIC_HOURS_SAT}</p>
+                    <p className="text-slate-300">{clinicConfig.CLINIC_HOURS}<br />{clinicConfig.CLINIC_HOURS_NOTE}</p>
                   </div>
                 </div>
               </div>
