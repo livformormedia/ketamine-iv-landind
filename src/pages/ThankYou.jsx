@@ -127,9 +127,9 @@ export default function ThankYou() {
                     <Shield className="w-6 h-6 stroke-[2.5]" />
                   </div>
                   <div>
-                    <strong className="text-[#352253] text-lg block mb-1">Insurance Verification</strong>
+                    <strong className="text-[#352253] text-lg block mb-1">Transparent Pricing</strong>
                     <p className="text-sm text-gray-600">
-                      We will verify your benefits during this call so you know exactly what is covered.
+                      Learn about our affordable cash-pay options and flexible payment plans during your call.
                     </p>
                   </div>
                 </div>
