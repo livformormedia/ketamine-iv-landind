@@ -318,17 +318,33 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
 
 <script>
 const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/rctm6c6z5rfu14oj2o4qy4cxhapknekx';
+const LEADCONNECTOR_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/0BHlTU6piHyy61dNErcM/webhook-trigger/182o3OsH4454tZS4YHiq';
 const REDIRECT_URL = 'https://ketaminecenter.livformor.com/ty-keta';
 
 function openAssessment() {
     const urlParams = new URLSearchParams(window.location.search);
-    const redirectParams = new URLSearchParams({
+    const utmData = {
         utm_source: urlParams.get('utm_source') || '',
         utm_medium: urlParams.get('utm_medium') || '',
         utm_campaign: urlParams.get('utm_campaign') || '',
         utm_term: urlParams.get('utm_term') || '',
         utm_content: urlParams.get('utm_content') || ''
-    });
+    };
+    
+    // Send to both webhooks
+    fetch(MAKE_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(utmData)
+    }).catch(e => console.log('Make webhook error:', e));
+    
+    fetch(LEADCONNECTOR_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(utmData)
+    }).catch(e => console.log('LeadConnector webhook error:', e));
+    
+    const redirectParams = new URLSearchParams(utmData);
     window.location.href = REDIRECT_URL + '?' + redirectParams.toString();
 }
 
