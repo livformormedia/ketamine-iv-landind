@@ -1,5 +1,5 @@
 // COPY THE HTML BELOW FOR YOUR ADS LANDING PAGE
-// This is a complete standalone HTML file that includes everything
+// This is a complete standalone HTML file that includes everything from Home2 page
 
 export const STANDALONE_HTML = `<!DOCTYPE html>
 <html lang="en">
@@ -9,335 +9,332 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
     <title>Ketamine Therapy - IV Treatment for Depression & Anxiety</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
     <style>
         * { font-family: 'Poppins', sans-serif !important; }
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(236, 158, 33, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(236, 158, 33, 0); }
         }
         .pulse-dot { animation: pulse-glow 1.5s infinite; }
         .modal-backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); }
+        @keyframes ping-slow {
+            75%, 100% { transform: scale(1.2); opacity: 0; }
+        }
+        .animate-ping-slow { animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
     </style>
 </head>
 <body class="bg-white">
 
-<!-- Authority Logos -->
-<div class="bg-white py-8 border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/66cec5b30_Untitled1920x200px.png" alt="Ketamine of Central Georgia" class="h-16 mx-auto opacity-80">
-    </div>
-</div>
-
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center bg-gradient-to-br from-purple-900/5 via-white to-amber-500/5 overflow-hidden">
+<section class="relative min-h-screen flex items-center bg-gradient-to-br from-[#352253]/5 via-white to-[#ec9e21]/5 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-900 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-500 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-[#352253] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#ec9e21] rounded-full blur-3xl"></div>
     </div>
-    
     <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight text-purple-900">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight text-[#352253]">
                 How One IV Ketamine Treatment Can Help Shift Your Brain from Depressed/Anxious to Hopeful in as Little as 3 Weeks — or Your Money Back!*
             </h1>
-            
-            <p class="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 text-purple-900 font-semibold">
+            <p class="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 text-[#352253] font-semibold">
                 90% of our patients have experienced an improvement in depression and anxiety
             </p>
-            
-            <p class="text-sm md:text-base mb-8 md:mb-10 text-purple-900/70 max-w-3xl mx-auto">
+            <p class="text-sm md:text-base mb-8 md:mb-10 text-[#352253]/70 max-w-3xl mx-auto">
                 *If you complete 2 of the 6 infusions, experience no improvement, and choose to discontinue, we'll refund 100% of the package price.
             </p>
-            
             <div class="w-full max-w-4xl mx-auto mb-8">
                 <div class="relative w-full" style="padding: 56.25% 0 0 0">
-                    <iframe src="https://fast.wistia.net/embed/iframe/nc5ldg3nj9?seo=true&videoFoam=true"
-                            title="Ketamine Therapy Video"
-                            allow="autoplay; fullscreen"
-                            allowfullscreen
-                            class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl"></iframe>
+                    <iframe src="https://fast.wistia.net/embed/iframe/nc5ldg3nj9?seo=true&videoFoam=true" title="Ketamine Therapy Video" allow="autoplay; fullscreen" allowfullscreen class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl"></iframe>
                 </div>
             </div>
+            <div class="w-full max-w-4xl mx-auto">
+                <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl">
+                    <div class="flex flex-col items-center gap-1">
+                        <span class="leading-tight">Start Healing Today</span>
+                        <span class="text-xs md:text-sm font-normal opacity-90">Take the 30 second quiz</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <button onclick="openAssessment()" class="w-full max-w-4xl bg-amber-500 hover:bg-amber-600 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl">
-                <div class="flex flex-col items-center gap-1">
-                    <span class="leading-tight">Start Healing Today</span>
-                    <span class="text-xs md:text-sm font-normal opacity-90">Take the 30 second quiz</span>
-                </div>
-            </button>
+<!-- Authority Logos -->
+<section class="bg-white py-6 md:py-8 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs md:text-sm text-slate-500 mb-4 md:mb-6 uppercase tracking-wide">As Featured In</p>
+        <div class="flex justify-center">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/66cec5b30_Untitled1920x200px.png" alt="Featured in major news outlets" class="w-full max-w-4xl h-auto">
         </div>
     </div>
 </section>
 
 <!-- Testimonials Gallery -->
-<section class="py-16 md:py-24 bg-gray-50">
+<section class="py-16 md:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-[#352253] mb-12 md:mb-16">
             We love to speak with results, here's what our patients are saying
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/f063f33b5_WhatsAppImage2025-12-18at1328211.jpg" alt="Testimonial" class="w-full h-auto object-cover"></div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/38bb3cd35_WhatsAppImage2025-12-18at132821.jpg" alt="Testimonial" class="w-full h-auto object-cover"></div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/fe2ef6d39_WhatsAppImage2025-12-18at1328201.jpg" alt="Testimonial" class="w-full h-auto object-cover"></div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/4e6c6ebda_WhatsAppImage2025-12-18at132820.jpg" alt="Testimonial" class="w-full h-auto object-cover"></div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/286df1125_WhatsAppImage2025-12-18at1328192.jpg" alt="Testimonial" class="w-full h-auto object-cover"></div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/564476657_WhatsAppImage2025-12-18at1328191.jpg" alt="Testimonial" class="w-full h-auto object-cover"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/f063f33b5_WhatsAppImage2025-12-18at1328211.jpg" alt="Patient testimonial 1" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/38bb3cd35_WhatsAppImage2025-12-18at132821.jpg" alt="Patient testimonial 2" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/fe2ef6d39_WhatsAppImage2025-12-18at1328201.jpg" alt="Patient testimonial 3" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/4e6c6ebda_WhatsAppImage2025-12-18at132820.jpg" alt="Patient testimonial 4" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/286df1125_WhatsAppImage2025-12-18at1328192.jpg" alt="Patient testimonial 5" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/564476657_WhatsAppImage2025-12-18at1328191.jpg" alt="Patient testimonial 6" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/79ecdb1f4_WhatsAppImage2025-12-18at132819.jpg" alt="Patient testimonial 7" class="w-full h-auto">
+            </div>
         </div>
     </div>
 </section>
+
+<!-- CTA Button -->
+<div class="max-w-4xl mx-auto px-4 text-center py-12">
+    <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[#ec9e21]/30 rounded-2xl animate-ping-slow"></div>
+        <span class="relative leading-tight">Start Healing Today</span>
+    </button>
+</div>
 
 <!-- What to Expect Section -->
-<section class="py-16 md:py-24 bg-white">
+<section class="py-16 md:py-24 bg-gradient-to-br from-[#352253]/5 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Here's What You'll Get at Your Visit</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg border border-purple-100"><div class="text-4xl mb-4">🎯</div><h3 class="text-xl font-bold mb-3 text-gray-900">Rapid Symptom Relief</h3><p class="text-gray-600">Experience significant improvement in anxiety and depression symptoms within 2-3 weeks.</p></div>
-            <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg border border-purple-100"><div class="text-4xl mb-4">✨</div><h3 class="text-xl font-bold mb-3 text-gray-900">Immediate Emotional Lightness</h3><p class="text-gray-600">Feel lighter and relieved, as if a weight has been lifted off your shoulders, often after the 1st or 2nd treatment.</p></div>
-            <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg border border-purple-100"><div class="text-4xl mb-4">💪</div><h3 class="text-xl font-bold mb-3 text-gray-900">Enhanced Resiliency</h3><p class="text-gray-600">Boost your ability to cope with daily stressors and challenges.</p></div>
-            <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg border border-purple-100"><div class="text-4xl mb-4">🌟</div><h3 class="text-xl font-bold mb-3 text-gray-900">Positive Observable Changes</h3><p class="text-gray-600">Noticeable improvements in mood and demeanor, recognized by both you and those around you.</p></div>
-            <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg border border-purple-100"><div class="text-4xl mb-4">🕊️</div><h3 class="text-xl font-bold mb-3 text-gray-900">Suicidal Thought Management</h3><p class="text-gray-600">Receive effective support for managing and reducing suicidal thoughts in a serene, calming environment.</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- Problem Section -->
-<section class="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-purple-50 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="mb-16"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/f5f8ad11b_32997.jpg" alt="Depression statistics" class="rounded-3xl shadow-2xl w-full max-w-4xl mx-auto border-2 border-purple-500/30"></div>
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight text-slate-900">The Problem <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Millions Face</span></h2>
-                <div class="space-y-6 text-lg leading-relaxed">
-                    <p class="text-slate-700">Millions of people are doing everything "right":</p>
-                    <ul class="space-y-3 ml-6">
-                        <li class="flex items-start gap-3"><span class="text-purple-600 font-bold text-2xl">•</span><span class="text-slate-700">Taking meds.</span></li>
-                        <li class="flex items-start gap-3"><span class="text-purple-600 font-bold text-2xl">•</span><span class="text-slate-700">Showing up to therapy.</span></li>
-                        <li class="flex items-start gap-3"><span class="text-purple-600 font-bold text-2xl">•</span><span class="text-slate-700">Practicing gratitude.</span></li>
-                        <li class="flex items-start gap-3"><span class="text-purple-600 font-bold text-2xl">•</span><span class="text-slate-700">Trying to "stay positive."</span></li>
-                    </ul>
-                    <p class="text-2xl font-bold text-slate-900 pt-6">But still — the heaviness stays.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Like a fog that never lifts.</span></p>
-                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 border-2 border-purple-300 p-6 rounded-2xl shadow-lg mt-8">
-                        <p class="text-xl font-medium text-slate-900 mb-2">It's not that you didn't try hard enough.</p>
-                        <p class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">It's that the system gave you the wrong tools.</p>
-                    </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16 text-[#352253]">
+            Here's What You'll Get at Your Visit
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#352253]/10 hover:border-[#352253]/30 transition-all">
+                <div class="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#ec9e21] rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
+                <h3 class="text-xl font-bold mb-3 text-[#352253]">Rapid Symptom Relief</h3>
+                <p class="text-[#352253]/70 leading-relaxed">Experience significant improvement in anxiety and depression symptoms within 2-3 weeks.</p>
             </div>
-            <div class="relative">
-                <div class="bg-white p-6 rounded-2xl shadow-xl border-2 border-purple-200">
-                    <div class="flex gap-1 mb-3">★★★★★</div>
-                    <p class="text-slate-700 italic mb-3">"I tried everything for years. This is the first thing that actually worked."</p>
-                    <p class="text-sm font-semibold text-slate-900">— Shannon F.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#352253]/10 hover:border-[#352253]/30 transition-all">
+                <div class="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#ec9e21] rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
+                <h3 class="text-xl font-bold mb-3 text-[#352253]">Immediate Emotional Lightness</h3>
+                <p class="text-[#352253]/70 leading-relaxed">Feel lighter and relieved, as if a weight has been lifted off your shoulders, often after the 1st or 2nd treatment.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#352253]/10 hover:border-[#352253]/30 transition-all">
+                <div class="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#ec9e21] rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-[#352253]">Enhanced Resiliency</h3>
+                <p class="text-[#352253]/70 leading-relaxed">Boost your ability to cope with daily stressors and challenges.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#352253]/10 hover:border-[#352253]/30 transition-all">
+                <div class="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#ec9e21] rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-[#352253]">Positive Observable Changes</h3>
+                <p class="text-[#352253]/70 leading-relaxed">Noticeable improvements in mood and demeanor, recognized by both you and those around you.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#352253]/10 hover:border-[#352253]/30 transition-all">
+                <div class="w-16 h-16 bg-gradient-to-br from-[#352253] to-[#ec9e21] rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-[#352253]">Suicidal Thought Management</h3>
+                <p class="text-[#352253]/70 leading-relaxed">Receive effective support for managing and reducing suicidal thoughts in a serene, calming environment.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Why It Fails Section -->
-<section class="py-16 md:py-24 bg-gradient-to-br from-red-950 via-slate-900 to-purple-900 text-white relative overflow-hidden">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/20 rounded-full blur-3xl"></div>
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div class="mb-8 md:mb-12"><div class="inline-block relative"><div class="absolute inset-0 bg-red-500/20 rounded-full blur-3xl"></div><div class="relative bg-gradient-to-br from-slate-900 to-red-900 border-4 border-red-500 rounded-3xl p-6 md:p-8 shadow-2xl"><div class="text-6xl md:text-8xl">💊</div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-red-500 text-7xl md:text-9xl font-bold">✕</div></div></div></div>
-        <div class="inline-flex items-center gap-2 md:gap-3 bg-red-500/20 border-2 border-red-500/50 px-4 md:px-6 py-2 md:py-3 rounded-full mb-6 md:mb-8 backdrop-blur-sm"><svg class="w-5 h-5 md:w-6 md:h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01"/></svg><span class="font-semibold text-red-300 text-sm md:text-base">Why Traditional Treatment Fails</span></div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 leading-tight px-2">Traditional Psychiatry Was Built to Manage Symptoms, Not Resolve Them</h2>
-        <div class="bg-white/10 backdrop-blur-lg border-2 border-white/20 rounded-3xl p-6 md:p-12 mb-6 md:mb-8 shadow-2xl">
-            <p class="text-xl sm:text-2xl md:text-3xl text-slate-200 mb-4 md:mb-6 leading-relaxed">"Can't sleep? Add another pill.<br>Still stuck? Adjust the dose."</p>
-            <div class="h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-6 md:my-8"></div>
-            <p class="text-lg sm:text-xl md:text-2xl font-bold text-amber-400 mb-6 md:mb-8">That's like turning down the volume on a smoke alarm…<br>while the fire still burns.</p>
-            <div class="mt-6 md:mt-8"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/22e6f7dab_everythings-fine-v0-mldppzg3nxud1.jpg" alt="This is fine" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-2 border-amber-500/50"></div>
-        </div>
-        <p class="text-lg sm:text-xl md:text-2xl text-slate-200 leading-relaxed px-2">To heal, you need a treatment that goes <strong>deeper</strong> — to the <strong>root of the brain itself</strong>.</p>
-    </div>
-</section>
-
-<!-- Breakthrough Section -->
-<section class="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-8 md:mb-12"><div class="inline-block relative"><div class="absolute inset-0 bg-green-500/20 rounded-full blur-3xl"></div><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/358794d14_GeneratedImageSeptember302025-4_18PM.png" alt="Ketamine therapy" class="relative rounded-3xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto border-2 border-purple-900/30"></div></div>
-        <div class="text-center mb-12 md:mb-16"><div class="inline-flex items-center gap-2 bg-green-500/20 text-green-300 border-2 border-green-500/50 px-4 md:px-6 py-2 md:py-3 rounded-full mb-4 md:mb-6 backdrop-blur-sm"><svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span class="font-semibold text-sm md:text-base">A New Class of Treatment</span></div><h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2">A Breakthrough Treatment<br>That Works Differently</h2></div>
-        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
-            <div class="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed">
-                <p class="text-slate-300">Thanks to neuroscience breakthroughs, there's now an <strong>FDA-cleared treatment</strong> for people who haven't found relief with meds or therapy.</p>
-                <p class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-amber-500">It's called at-home microdose ketamine therapy.</p>
-                <p class="text-slate-300">Unlike high-dose psychedelic sessions or endless pills, this gentle protocol <strong>rewires the brain quietly</strong> — while you live your life.</p>
-                <div class="bg-gradient-to-br from-purple-900/50 to-amber-500/50 backdrop-blur-lg border-2 border-purple-900/30 p-4 md:p-6 rounded-2xl shadow-xl"><p class="font-semibold text-white text-sm md:text-base">No psychedelic experience. No downtime. Just steady, meaningful healing.</p></div>
-            </div>
-            <div><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=600&fit=crop" alt="At-home treatment" class="rounded-3xl shadow-2xl w-full border-2 border-purple-900/30"></div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-            <div><div class="bg-gradient-to-br from-purple-900/50 to-slate-900/50 backdrop-blur-lg border-2 border-purple-900/30 rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 hover:border-purple-900/50 mb-6"><div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-900 to-amber-500 rounded-full flex items-center justify-center mb-4 md:mb-6 shadow-lg"><svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Gentle Protocol</h3><p class="text-slate-300 text-sm md:text-base">Small daily doses, not intense psychedelic trips</p></div></div>
-            <div><div class="bg-gradient-to-br from-purple-900/50 to-slate-900/50 backdrop-blur-lg border-2 border-purple-900/30 rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 hover:border-purple-900/50 mb-6"><div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-900 to-amber-500 rounded-full flex items-center justify-center mb-4 md:mb-6 shadow-lg"><svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Targets Root Cause</h3><p class="text-slate-300 text-sm md:text-base">Works at the neurological level, not just symptoms</p></div></div>
-            <div><div class="bg-gradient-to-br from-purple-900/50 to-slate-900/50 backdrop-blur-lg border-2 border-purple-900/30 rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 hover:border-purple-900/50 mb-6"><div class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-900 to-amber-500 rounded-full flex items-center justify-center mb-4 md:mb-6 shadow-lg"><svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Sustained Improvement</h3><p class="text-slate-300 text-sm md:text-base">Long-lasting changes, not temporary relief</p></div><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/a4d6cbeb6_image.png" alt="Testimonial" class="w-full rounded-2xl shadow-xl border-2 border-purple-900/30"></div>
-        </div>
-    </div>
-</section>
+<!-- CTA Button -->
+<div class="max-w-4xl mx-auto px-4 text-center py-12">
+    <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[#ec9e21]/30 rounded-2xl animate-ping-slow"></div>
+        <span class="relative leading-tight">Start Healing Today</span>
+    </button>
+</div>
 
 <!-- Proof Section -->
 <section class="py-16 md:py-24 bg-white relative overflow-hidden">
-    <div class="absolute top-0 left-1/3 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-0 left-1/3 w-96 h-96 bg-[#ec9e21]/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-[#352253]/20 rounded-full blur-3xl"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-8 md:mb-12"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/2bc059c66_image.png" alt="FDA Cleared" class="w-full max-w-xs md:max-w-md mx-auto"></div>
-        <div class="text-center mb-12 md:mb-16"><h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 text-purple-900">Backed by <span class="text-purple-900">400+ Studies</span>.<br>Trusted by Patients Nationwide.</h2></div>
+        <div class="text-center mb-8 md:mb-12">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/2bc059c66_image.png" alt="FDA Cleared" class="w-full max-w-xs md:max-w-md mx-auto">
+        </div>
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 text-[#352253]">
+                Backed by <span class="text-[#352253]">400+ Studies</span>.<br>Trusted by Patients Nationwide.
+            </h2>
+        </div>
         <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-            <div class="bg-white border-2 border-purple-900/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all"><div class="text-4xl md:text-5xl font-bold text-purple-900 mb-2">7 in 10</div><p class="text-sm md:text-lg text-purple-900/80">Patients with treatment-resistant depression report relief</p></div>
-            <div class="bg-white border-2 border-purple-900/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all"><div class="text-4xl md:text-5xl font-bold text-purple-900 mb-2">400+</div><p class="text-sm md:text-lg text-purple-900/80">Clinical studies at Yale, Stanford, NIH</p></div>
-            <div class="bg-white border-2 border-purple-900/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all"><div class="text-4xl md:text-5xl font-bold text-purple-900 mb-2">Lasting</div><p class="text-sm md:text-lg text-purple-900/80">Long-term improvement when paired with therapy</p></div>
-        </div>
-        <div class="bg-white border-2 border-purple-900/20 rounded-3xl p-6 md:p-8 mb-12 md:mb-16 shadow-lg"><h3 class="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-purple-900">Research Institutions</h3><div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-16"><div class="text-base md:text-xl font-semibold text-purple-900/80">Yale University</div><div class="text-base md:text-xl font-semibold text-purple-900/80">Stanford University</div><div class="text-base md:text-xl font-semibold text-purple-900/80">NIH</div><div class="text-base md:text-xl font-semibold text-purple-900/80">Johns Hopkins</div></div></div>
-        <div class="bg-white border-2 border-red-200 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-center gap-4 md:gap-6 shadow-lg"><div class="text-4xl md:text-6xl font-bold text-red-500">CNN</div><div class="text-center sm:text-left"><p class="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-purple-900">"A Revolutionary Treatment for Depression"</p><p class="text-sm md:text-base text-purple-900/70">Featured in CNN Health Special Report</p></div></div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section class="py-20 md:py-32 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold text-purple-900 mb-6">How This Gentle Daily Protocol<br><span class="text-purple-900">Heals the Brain</span></h2><p class="text-xl text-purple-900/70">Unlike traditional treatments that mask symptoms, this protocol creates lasting change</p></div>
-        <div class="relative"><div class="hidden lg:block absolute top-20 left-1/4 right-1/4 h-1 bg-gradient-to-r from-purple-900/20 via-purple-900 to-purple-900/20"></div><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="relative"><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-900/30"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">1</div><h3 class="text-xl font-bold text-purple-900 mb-3">Small, Precise Daily Dose</h3><p class="text-purple-900/70 leading-relaxed">No trips, no downtime, no interruption to your life</p></div><div class="hidden lg:block absolute top-8 -right-4 w-8 h-8 text-purple-900"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg></div></div>
-            <div class="relative"><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-900/30"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">2</div><h3 class="text-xl font-bold text-purple-900 mb-3">Creates Neuroplasticity Window</h3><p class="text-purple-900/70 leading-relaxed">Opens your brain's ability to form new connections</p></div><div class="hidden lg:block absolute top-8 -right-4 w-8 h-8 text-purple-900"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg></div></div>
-            <div class="relative"><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-900/30"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">3</div><h3 class="text-xl font-bold text-purple-900 mb-3">Brain Forms New Pathways</h3><p class="text-purple-900/70 leading-relaxed">Healthier neural patterns replace old, stuck ones</p></div><div class="hidden lg:block absolute top-8 -right-4 w-8 h-8 text-purple-900"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg></div></div>
-            <div class="relative"><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-900/30"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">4</div><h3 class="text-xl font-bold text-purple-900 mb-3">Steady Improvement</h3><p class="text-purple-900/70 leading-relaxed">Over weeks, mood and clarity improve naturally</p></div></div>
-        </div></div>
-        <div class="mt-16 bg-white rounded-2xl p-8 shadow-xl"><div class="grid md:grid-cols-2 gap-8 items-center"><div><h3 class="text-2xl font-bold text-purple-900 mb-4">What to Expect</h3><ul class="space-y-4 text-purple-900/80"><li class="flex items-start gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><span><strong>Safe:</strong> Medical-grade, prescribed by licensed physicians</span></li><li class="flex items-start gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><span><strong>Effective:</strong> 70% of patients report significant improvement</span></li><li class="flex items-start gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><span><strong>Convenient:</strong> Take at home, no clinic visits required</span></li></ul></div><div><img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop" alt="Brain neuroplasticity" class="rounded-xl shadow-lg w-full"></div></div></div>
-    </div>
-</section>
-
-<!-- Comparison Section -->
-<section class="py-20 md:py-32 bg-gradient-to-br from-purple-900 via-slate-900 to-purple-900/80 relative overflow-hidden">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-3xl"></div>
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Not All Ketamine Programs<br>Are the Same</h2><p class="text-xl text-slate-300">Here's what makes our program different</p></div>
-        <div class="bg-gradient-to-br from-slate-900/80 to-purple-900/80 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border-2 border-purple-900/30">
-            <div class="grid grid-cols-2 bg-gradient-to-r from-slate-900 to-purple-900 text-white border-b-2 border-purple-900/30"><div class="p-6 text-center border-r-2 border-purple-900/30"><h3 class="text-xl font-bold">Other Programs</h3></div><div class="p-6 text-center bg-gradient-to-r from-purple-900 to-purple-900/80"><h3 class="text-xl font-bold">Our Program ✓</h3></div></div>
-            <div class="grid grid-cols-2 border-b border-purple-900/20"><div class="p-6 border-r-2 border-purple-900/20 flex items-center gap-3 bg-red-950/20"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span class="text-slate-300">High-dose psychedelic trips</span></div><div class="p-6 flex items-center gap-3 bg-green-950/20"><svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="font-semibold text-white">Gentle microdose protocol</span></div></div>
-            <div class="grid grid-cols-2 border-b border-purple-900/20"><div class="p-6 border-r-2 border-purple-900/20 flex items-center gap-3 bg-red-950/20"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span class="text-slate-300">$400–$600 per session</span></div><div class="p-6 flex items-center gap-3 bg-green-950/20"><svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="font-semibold text-white">$750 for full 3-month program</span></div></div>
-            <div class="grid grid-cols-2 border-b border-purple-900/20"><div class="p-6 border-r-2 border-purple-900/20 flex items-center gap-3 bg-red-950/20"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span class="text-slate-300">Online-only support</span></div><div class="p-6 flex items-center gap-3 bg-green-950/20"><svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="font-semibold text-white">Local, responsive clinic</span></div></div>
-            <div class="grid grid-cols-2 border-b border-purple-900/20"><div class="p-6 border-r-2 border-purple-900/20 flex items-center gap-3 bg-red-950/20"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span class="text-slate-300">One-size-fits-all approach</span></div><div class="p-6 flex items-center gap-3 bg-green-950/20"><svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="font-semibold text-white">Personalized treatment plan</span></div></div>
-            <div class="grid grid-cols-2"><div class="p-6 border-r-2 border-purple-900/20 flex items-center gap-3 bg-red-950/20"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span class="text-slate-300">Limited availability</span></div><div class="p-6 flex items-center gap-3 bg-green-950/20"><svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="font-semibold text-white">Fast enrollment, 48hr turnaround</span></div></div>
-        </div>
-        <div class="mt-12 grid md:grid-cols-3 gap-6">
-            <div class="bg-gradient-to-br from-amber-900/30 to-orange-900/30 border-amber-500/30 hover:border-amber-400/50 backdrop-blur-sm rounded-2xl p-6 border-2 text-center shadow-xl transition-all"><div class="text-4xl mb-3">🎖️</div><h4 class="font-bold text-white mb-2">Military & First Responders</h4><p class="text-slate-300">Special discounted rates available</p></div>
-            <div class="bg-gradient-to-br from-purple-900/30 to-purple-900/50 border-purple-900/30 hover:border-purple-900/50 backdrop-blur-sm rounded-2xl p-6 border-2 text-center shadow-xl transition-all"><div class="text-4xl mb-3">💳</div><h4 class="font-bold text-white mb-2">HSA/FSA Eligible</h4><p class="text-slate-300">Use pre-tax dollars for treatment</p></div>
-            <div class="bg-gradient-to-br from-amber-500/30 to-amber-500/50 border-amber-500/30 hover:border-amber-500/50 backdrop-blur-sm rounded-2xl p-6 border-2 text-center shadow-xl transition-all"><div class="text-4xl mb-3">📅</div><h4 class="font-bold text-white mb-2">Payment Plans</h4><p class="text-slate-300">Flexible financing options available</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- Process Section -->
-<section class="py-20 md:py-32 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold text-purple-900 mb-6">Getting Started Is <span class="text-purple-900">Easy</span></h2><p class="text-xl text-purple-900/70">From assessment to treatment in as little as 48 hours</p></div>
-        <div class="max-w-4xl mx-auto mb-16">
-            <div class="relative mb-8"><div class="flex items-start gap-6"><div class="flex-shrink-0"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-3xl shadow-lg">📋</div></div><div class="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-900/30 transition-colors"><h3 class="text-xl font-bold text-purple-900 mb-2">Take the 2-Minute Survey</h3><p class="text-purple-900/70">Answer a few simple questions about your symptoms and history</p></div></div><div class="ml-8 h-8 w-0.5 bg-purple-900/20"></div></div>
-            <div class="relative mb-8"><div class="flex items-start gap-6"><div class="flex-shrink-0"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-3xl shadow-lg">👨‍⚕️</div></div><div class="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-900/30 transition-colors"><h3 class="text-xl font-bold text-purple-900 mb-2">Virtual Medical Evaluation</h3><p class="text-purple-900/70">Connect with a licensed physician who specializes in ketamine therapy</p></div></div><div class="ml-8 h-8 w-0.5 bg-purple-900/20"></div></div>
-            <div class="relative mb-8"><div class="flex items-start gap-6"><div class="flex-shrink-0"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-3xl shadow-lg">📦</div></div><div class="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-900/30 transition-colors"><h3 class="text-xl font-bold text-purple-900 mb-2">Medication Delivered to Your Door</h3><p class="text-purple-900/70">Receive your personalized treatment kit with clear instructions</p></div></div><div class="ml-8 h-8 w-0.5 bg-purple-900/20"></div></div>
-            <div class="relative mb-8"><div class="flex items-start gap-6"><div class="flex-shrink-0"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-3xl shadow-lg">🏠</div></div><div class="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-900/30 transition-colors"><h3 class="text-xl font-bold text-purple-900 mb-2">Begin Protocol (While Living Normally)</h3><p class="text-purple-900/70">Take small daily doses at home - no trips, no downtime</p></div></div><div class="ml-8 h-8 w-0.5 bg-purple-900/20"></div></div>
-            <div class="relative"><div class="flex items-start gap-6"><div class="flex-shrink-0"><div class="w-16 h-16 bg-gradient-to-br from-purple-900 to-purple-900/80 rounded-full flex items-center justify-center text-3xl shadow-lg">📊</div></div><div class="flex-1 bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-900/30 transition-colors"><h3 class="text-xl font-bold text-purple-900 mb-2">Ongoing Progress Check-Ins</h3><p class="text-purple-900/70">Regular monitoring and support from your care team</p></div></div></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop" alt="Happy patient" class="rounded-2xl shadow-2xl w-full"></div>
-            <div><h3 class="text-3xl font-bold text-purple-900 mb-6">Start Your Journey to Wellness Today</h3><ul class="space-y-4 mb-8"><li class="flex items-start gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-lg text-purple-900/80">No insurance required (but we accept most plans)</span></li><li class="flex items-start gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-lg text-purple-900/80">100% confidential and HIPAA compliant</span></li><li class="flex items-start gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-lg text-purple-900/80">Cancel anytime, no long-term commitment</span></li></ul><button onclick="openAssessment()" class="bg-amber-500 hover:bg-amber-600 text-white text-lg px-6 py-5 w-full md:w-auto rounded-lg font-bold shadow-xl"><div class="flex flex-col items-center gap-1"><span class="leading-tight">Start Healing Today</span><span class="text-xs font-normal opacity-90">Take the 30 second quiz</span></div></button></div>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing Section -->
-<section class="py-20 md:py-32 bg-gradient-to-br from-purple-900 to-slate-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold mb-6">Affordable, Transparent,<br><span class="text-amber-400">No Surprises</span></h2></div>
-        <div class="max-w-3xl mx-auto">
-            <div class="bg-white rounded-3xl p-8 md:p-12 text-purple-900 shadow-2xl mb-8">
-                <div class="text-center mb-8"><div class="inline-block bg-amber-100 text-amber-800 px-6 py-2 rounded-full font-semibold mb-6">Most Popular</div><h3 class="text-3xl font-bold mb-4">Complete 3-Month Program</h3><div class="flex items-end justify-center gap-2"><span class="text-6xl md:text-7xl font-bold text-purple-900">$750</span></div><p class="text-xl text-purple-900/70 mt-4">Less than <strong>$8.50/day</strong></p><p class="text-purple-900/60 mt-2">Compare to $400–$600 per session elsewhere</p></div>
-                <div class="border-t border-slate-200 pt-8 mb-8"><h4 class="font-bold text-xl mb-6 text-center">Everything Included:</h4><ul class="space-y-4"><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">Complete medical evaluation</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">Personalized treatment plan</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">3 months of medication</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">Ongoing medical support</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">Progress monitoring & adjustments</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">Access to care team</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-lg">Educational resources</span></li></ul></div>
-                <p class="text-center text-sm text-purple-900/60 mt-4">✓ No insurance required · ✓ Payment plans available · ✓ HSA/FSA eligible</p>
+            <div class="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all">
+                <div class="text-4xl md:text-5xl font-bold text-[#352253] mb-2">7 in 10</div>
+                <p class="text-sm md:text-lg text-[#352253]/80">Patients with treatment-resistant depression report relief</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6"><h4 class="font-bold text-lg mb-3">💰 Payment Plans Available</h4><p class="text-slate-200">Split payments into manageable monthly installments with 0% interest</p></div>
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6"><h4 class="font-bold text-lg mb-3">🏥 Insurance Accepted</h4><p class="text-slate-200">We work with most major insurance providers. Check your coverage during assessment</p></div>
+            <div class="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all">
+                <div class="text-4xl md:text-5xl font-bold text-[#352253] mb-2">400+</div>
+                <p class="text-sm md:text-lg text-[#352253]/80">Clinical studies at Yale, Stanford, NIH</p>
+            </div>
+            <div class="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all">
+                <div class="text-4xl md:text-5xl font-bold text-[#352253] mb-2">Lasting</div>
+                <p class="text-sm md:text-lg text-[#352253]/80">Long-term improvement when paired with therapy</p>
+            </div>
+        </div>
+        <div class="bg-white border-2 border-[#352253]/20 rounded-3xl p-6 md:p-8 mb-12 md:mb-16 shadow-lg">
+            <h3 class="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-[#352253]">Research Institutions</h3>
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-16">
+                <div class="text-base md:text-xl font-semibold text-[#352253]/80">Yale University</div>
+                <div class="text-base md:text-xl font-semibold text-[#352253]/80">Stanford University</div>
+                <div class="text-base md:text-xl font-semibold text-[#352253]/80">NIH</div>
+                <div class="text-base md:text-xl font-semibold text-[#352253]/80">Johns Hopkins</div>
+            </div>
+        </div>
+        <div class="bg-white border-2 border-red-200 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-center gap-4 md:gap-6 shadow-lg">
+            <div class="text-4xl md:text-6xl font-bold text-red-500">CNN</div>
+            <div class="text-center sm:text-left">
+                <p class="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-[#352253]">"A Revolutionary Treatment for Depression"</p>
+                <p class="text-sm md:text-base text-[#352253]/70">Featured in CNN Health Special Report</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FAQ Section -->
-<section class="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-purple-900 relative overflow-hidden">
-    <div class="absolute top-1/3 right-0 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/3 left-0 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-12 md:mb-16"><h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">Frequently Asked Questions</h2><p class="text-base md:text-xl text-slate-300">Get answers to common questions about ketamine therapy</p></div>
-        <div class="space-y-3 md:space-y-4">
-            <div class="bg-gradient-to-br from-slate-900/80 to-purple-900/80 backdrop-blur-lg border-2 border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-900/50 transition-all duration-300 shadow-xl"><button class="w-full px-4 md:px-6 py-4 md:py-5 flex items-center justify-between hover:bg-purple-900/30 transition-colors duration-300 text-left" onclick="toggleFAQ(this)"><span class="font-semibold text-sm md:text-lg text-white pr-4">Is At-Home Ketamine Microdosing Safe?</span><svg class="w-5 h-5 md:w-6 md:h-6 text-slate-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer hidden px-4 md:px-6 py-4 md:py-5 bg-slate-900/50 border-t-2 border-purple-900/30"><p class="text-sm md:text-base text-slate-300 leading-relaxed whitespace-pre-line">When done with medical direction, at-home ketamine microdosing can be safe and effective. At Ketamine of Central Georgia, every treatment plan is carefully tailored and overseen by experienced professionals. We conduct thorough evaluations to ensure you're a good candidate, and we provide clear guidance, ongoing support, and access to clinical expertise throughout the program. Because the doses are sub-perceptual (meaning you won't feel intoxicated or impaired), they are designed to fit safely into your daily routine without disrupting your ability to function. Safety, effectiveness, and your well-being are our top priorities at every step.</p></div></div>
-        </div>
-    </div>
-</section>
+<!-- CTA Button -->
+<div class="max-w-4xl mx-auto px-4 text-center py-12">
+    <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[#ec9e21]/30 rounded-2xl animate-ping-slow"></div>
+        <span class="relative leading-tight">Start Healing Today</span>
+    </button>
+</div>
 
 <!-- About Doctor Section -->
 <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-purple-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8 md:mb-12"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/898bd64d4_image.png" alt="Dr. Judah Greenberg" class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-xl mx-auto object-cover"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-purple-900 mb-8 md:mb-12">About Dr. Judah Greenberg</h2>
-        <div class="max-w-4xl mx-auto"><div class="space-y-4 text-purple-900/80 leading-relaxed text-center md:text-left"><p>Dr. Judah Greenberg grew up in Dallas, Texas, and earned both his undergraduate and medical degrees from the University of Pennsylvania. After eight Philadelphia winters, he headed back South and completed his internal medicine residency at Emory University in Atlanta (with his new wife happily on board).</p><p>He went on to practice in the emergency department at the Atlanta VA Medical Center and later trained in dermatology and skin surgery. During his internal medicine training, he developed a deep appreciation for how closely mental health is tied to overall well-being—an outlook that continues to shape his whole-person approach to care.</p><p>While practicing dermatology and skin cancer surgery in Middle Georgia, Dr. Greenberg maintained a strong interest in psychopharmacology and closely followed the growing medical research on ketamine therapy. After seeing firsthand how powerfully ketamine can help people struggling with mental health conditions and chronic pain, he made it his mission to bring this treatment to the Middle Georgia community.</p><p>Dr. Greenberg is triple board-certified in Internal Medicine, Dermatology, and Micrographic Dermatologic Surgery. He lives in Macon with his wife and six energetic children.</p></div></div>
-    </div>
-</section>
-
-<!-- Final Invitation Section -->
-<section id="assessment" class="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-8 md:mb-12"><div class="inline-block relative"><div class="absolute inset-0 bg-purple-900/20 rounded-full blur-3xl"></div><img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=600&fit=crop" alt="Hope and connection" class="relative rounded-full shadow-2xl w-full max-w-xs md:max-w-sm mx-auto border-4 border-purple-900/50"></div></div>
-        <div class="text-center mb-12 md:mb-16"><h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2 text-white">You're Not Broken.<br>You're Ready for a<br>New Way Forward.</h2><p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed px-2">If you've done all the "right" things and still feel stuck, you know how discouraging it is to wonder whether real healing is possible.</p><p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white mt-4 md:mt-6 max-w-4xl mx-auto px-2">This treatment may be the turning point that helps you feel like yourself again.</p></div>
-        <div class="max-w-2xl mx-auto"><div class="bg-gradient-to-br from-slate-900/80 to-purple-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-8 shadow-2xl border-2 border-purple-900/30"><div class="space-y-4"><div class="flex items-start gap-4"><svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><div><p class="font-semibold text-white">Location</p><p class="text-slate-300">3312 Northside Dr. STE d235<br>Macon, GA 31210</p></div></div><div class="flex items-start gap-4"><svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><div><p class="font-semibold text-white">Phone</p><p class="text-slate-300">478-201-9220</p></div></div><div class="flex items-start gap-4"><svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><div><p class="font-semibold text-white">Email</p><p class="text-slate-300">info@ketamineofcentralgeorgia.com</p></div></div><div class="flex items-start gap-4"><svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><div><p class="font-semibold text-white">Hours</p><p class="text-slate-300">Monday - Friday & Sunday: 9:00 AM - 5:00 PM<br>Closed on Saturdays</p></div></div></div></div>
-            <div class="rounded-3xl overflow-hidden shadow-2xl h-80 border-2 border-purple-900/30"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.8825!2d-83.6324!3d32.8407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUwJzI2LjUiTiA4M8KwMzcnNTYuNiJX!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="text-center mb-8 md:mb-12">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68dbc548dd6f65762349f6aa/898bd64d4_image.png" alt="Dr. Judah Greenberg" class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-xl mx-auto object-cover">
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-[#352253] mb-8 md:mb-12">About Dr. Judah Greenberg</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-4 text-[#352253]/80 leading-relaxed text-center md:text-left">
+                <p>Dr. Judah Greenberg grew up in Dallas, Texas, and earned both his undergraduate and medical degrees from the University of Pennsylvania. After eight Philadelphia winters, he headed back South and completed his internal medicine residency at Emory University in Atlanta (with his new wife happily on board).</p>
+                <p>He went on to practice in the emergency department at the Atlanta VA Medical Center and later trained in dermatology and skin surgery. During his internal medicine training, he developed a deep appreciation for how closely mental health is tied to overall well-being—an outlook that continues to shape his whole-person approach to care.</p>
+                <p>While practicing dermatology and skin cancer surgery in Middle Georgia, Dr. Greenberg maintained a strong interest in psychopharmacology and closely followed the growing medical research on ketamine therapy. After seeing firsthand how powerfully ketamine can help people struggling with mental health conditions and chronic pain, he made it his mission to bring this treatment to the Middle Georgia community.</p>
+                <p>Dr. Greenberg is triple board-certified in Internal Medicine, Dermatology, and Micrographic Dermatologic Surgery. He lives in Macon with his wife and six energetic children.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Floating CTA Button -->
-<div id="floating-cta" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 hidden">
-    <button onclick="openAssessment()" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 text-lg">
-        Start Healing Today →
+<!-- CTA Button -->
+<div class="max-w-4xl mx-auto px-4 text-center py-12">
+    <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[#ec9e21]/30 rounded-2xl animate-ping-slow"></div>
+        <span class="relative leading-tight">Start Healing Today</span>
     </button>
 </div>
 
-<!-- Assessment Modal -->
-<div id="assessment-modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-backdrop p-4 overflow-y-auto">
-    <div class="relative w-full max-w-3xl my-8">
-        <button onclick="closeAssessment()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        <div id="modal-content" class="bg-white rounded-3xl p-6 md:p-12 shadow-2xl max-h-[70vh] overflow-y-auto"></div>
+<!-- Final Invitation Section -->
+<section id="assessment" class="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-[#352253] to-slate-900 text-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-[#352253]/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#ec9e21]/20 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-8 md:mb-12">
+            <div class="inline-block relative">
+                <div class="absolute inset-0 bg-[#352253]/20 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=600&fit=crop" alt="Hope and connection" class="relative rounded-full shadow-2xl w-full max-w-xs md:max-w-sm mx-auto border-4 border-[#352253]/50">
+            </div>
+        </div>
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2 text-white">
+                You're Not Broken.<br>You're Ready for a<br>New Way Forward.
+            </h2>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed px-2">
+                If you've done all the "right" things and still feel stuck, you know how discouraging it is to wonder whether real healing is possible.
+            </p>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white mt-4 md:mt-6 max-w-4xl mx-auto px-2">
+                This treatment may be the turning point that helps you feel like yourself again.
+            </p>
+        </div>
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-gradient-to-br from-slate-900/80 to-[#352253]/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-8 shadow-2xl border-2 border-[#352253]/30">
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <div>
+                            <p class="font-semibold text-white">Location</p>
+                            <p class="text-slate-300">3312 Northside Dr. STE d235<br>Macon, GA 31210</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <div>
+                            <p class="font-semibold text-white">Phone</p>
+                            <p class="text-slate-300">478-201-9220</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <div>
+                            <p class="font-semibold text-white">Email</p>
+                            <p class="text-slate-300">info@ketamineofcentralgeorgia.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-[#ec9e21] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <div>
+                            <p class="font-semibold text-white">Hours</p>
+                            <p class="text-slate-300">Monday - Friday & Sunday: 9:00 AM - 5:00 PM<br>Closed on Saturdays</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-80 border-2 border-[#352253]/30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.8825!2d-83.6324!3d32.8407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUwJzI2LjUiTiA4M8KwMzcnNTYuNiJX!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 <script>
-function toggleFAQ(btn){const a=btn.nextElementSibling;const c=btn.querySelector('.chevron');if(a.classList.contains('hidden')){a.classList.remove('hidden');c.style.transform='rotate(180deg)';}else{a.classList.add('hidden');c.style.transform='rotate(0deg)';}}
 const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/rctm6c6z5rfu14oj2o4qy4cxhapknekx';
 const REDIRECT_URL = 'https://ketaminecenter.livformor.com/ty-keta';
-let currentStep = 1;
-let formData = {lives_in_georgia:'',date_of_birth:'',insurance_acknowledgment:'',struggling_with:[],treatment_goals:[],medical_history:[],full_name:'',email:'',phone:'',sms_consent:false,utm_source:'',utm_medium:'',utm_campaign:'',utm_term:'',utm_content:''};
-function captureUTMs(){const u=new URLSearchParams(window.location.search);formData.utm_source=u.get('utm_source')||'';formData.utm_medium=u.get('utm_medium')||'';formData.utm_campaign=u.get('utm_campaign')||'';formData.utm_term=u.get('utm_term')||'';formData.utm_content=u.get('utm_content')||'';}
-window.addEventListener('scroll',()=>{const f=document.getElementById('floating-cta');if(window.scrollY>800){f.classList.remove('hidden');}else{f.classList.add('hidden');}});
-function openAssessment(){captureUTMs();document.getElementById('assessment-modal').classList.remove('hidden');document.getElementById('assessment-modal').classList.add('flex');document.body.style.overflow='hidden';currentStep=1;renderStep();if(typeof fbq!=='undefined'){fbq('trackCustom','opened-assessment');}}
-function closeAssessment(){document.getElementById('assessment-modal').classList.add('hidden');document.getElementById('assessment-modal').classList.remove('flex');document.body.style.overflow='unset';}
-function calculateAge(b){const p=b.split('/');if(p.length!==3)return 0;const m=parseInt(p[0],10)-1;const d=parseInt(p[1],10);const y=parseInt(p[2],10);const t=new Date();const birth=new Date(y,m,d);let a=t.getFullYear()-birth.getFullYear();const md=t.getMonth()-birth.getMonth();if(md<0||(md===0&&t.getDate()<birth.getDate())){a--;}return a;}
-function toggleArrayItem(a,i){const idx=a.indexOf(i);if(idx>-1){a.splice(idx,1);}else{a.push(i);}}
-async function handleNext(){if(currentStep===1&&formData.lives_in_georgia==='no'){await submitDisqualified('Not in Georgia');renderDisqualified('Unfortunately, we currently only serve patients in Georgia.');return;}if(currentStep===2){if(formData.date_of_birth&&calculateAge(formData.date_of_birth)<18){await submitDisqualified('Under 18 years old');renderDisqualified('You must be 18 years or older to qualify for ketamine therapy.');return;}if(formData.insurance_acknowledgment==='no'){await submitDisqualified('Did not acknowledge insurance policy');renderDisqualified('Understanding the out-of-pocket investment is required to proceed.');return;}}if(currentStep===5){const dis=['pregnant_or_planning','schizophrenia_psychosis','family_schizophrenia','uncontrolled_hypertension','liver_problems','heart_failure','aneurysm_stroke'];const has=formData.medical_history.some(c=>dis.includes(c));if(has){await submitDisqualified('Medical history contraindication');renderDisqualified('Based on your medical history, ketamine therapy may not be safe for you at this time. Please consult with your primary care physician.');return;}}if(currentStep===6){await submitQualified();return;}currentStep++;renderStep();}
-function handleBack(){currentStep--;renderStep();}
-async function submitDisqualified(r){const p={...formData,status:'disqualified',disqualification_reason:r};try{await fetch(MAKE_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});}catch(e){console.error('Error:',e);}}
-async function submitQualified(){const p={...formData,status:'qualified'};try{await fetch(MAKE_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});if(typeof fbq!=='undefined'){fbq('track','Lead');}const u=new URLSearchParams();if(formData.utm_source)u.set('utm_source',formData.utm_source);if(formData.utm_medium)u.set('utm_medium',formData.utm_medium);if(formData.utm_campaign)u.set('utm_campaign',formData.utm_campaign);if(formData.utm_term)u.set('utm_term',formData.utm_term);if(formData.utm_content)u.set('utm_content',formData.utm_content);const r=u.toString()?REDIRECT_URL+'?'+u.toString():REDIRECT_URL;window.location.href=r;}catch(e){console.error('Error:',e);alert('Error submitting. Please try again.');}}
-function canProceed(){switch(currentStep){case 1:return formData.lives_in_georgia!=='';case 2:return formData.date_of_birth!==''&&formData.insurance_acknowledgment!=='';case 3:return formData.struggling_with.length>0;case 4:return formData.treatment_goals.length>0;case 5:return formData.medical_history.length>0;case 6:return formData.full_name!==''&&formData.email!==''&&formData.phone!=='';default:return false;}}
-function renderDisqualified(m){document.getElementById('modal-content').innerHTML='<div class="text-center"><div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6"><svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div><h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You for Your Interest</h2><p class="text-lg text-gray-600 mb-8">'+m+'</p><button onclick="closeAssessment()" class="bg-purple-900 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-lg">Close</button></div>';}
-function renderStep(){const pr=Math.round((currentStep/6)*100);let sc='';const pb='<div class="mb-6"><div class="flex justify-between items-center mb-2"><span class="text-purple-900 text-sm">Step '+currentStep+' of 6</span><span class="text-purple-600 text-sm">'+pr+'% Complete</span></div><div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-gradient-to-r from-purple-900 to-amber-500 h-2 rounded-full transition-all duration-300" style="width:'+pr+'%"></div></div></div>';if(currentStep===1){sc='<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Do you live in Georgia?</h2><div class="space-y-4"><div class="flex items-center space-x-3 p-4 border-2 '+(formData.lives_in_georgia==='yes'?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="formData.lives_in_georgia=\'yes\';renderStep();"><input type="radio" name="georgia" value="yes" '+(formData.lives_in_georgia==='yes'?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">Yes</label></div><div class="flex items-center space-x-3 p-4 border-2 '+(formData.lives_in_georgia==='no'?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="formData.lives_in_georgia=\'no\';renderStep();"><input type="radio" name="georgia" value="no" '+(formData.lives_in_georgia==='no'?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">No</label></div></div>';}else if(currentStep===2){sc='<div class="space-y-8"><div><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Date of Birth</h2><p class="text-gray-600 text-sm mb-4">Format: MM/DD/YYYY</p><input type="text" id="dob-input" value="'+formData.date_of_birth+'" placeholder="MM/DD/YYYY" maxlength="10" class="w-full text-lg p-6 border-2 border-gray-200 rounded-xl focus:border-purple-900 focus:outline-none"></div><div><h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Ketamine Therapy is Not Covered by Insurance</h3><p class="text-gray-600 mb-6">I understand that ketamine therapy is not covered by insurance and is an out-of-pocket investment in my mental health and future success.</p><div class="space-y-4"><div class="flex items-center space-x-3 p-4 border-2 '+(formData.insurance_acknowledgment==='yes'?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="formData.insurance_acknowledgment=\'yes\';renderStep();"><input type="radio" name="insurance" value="yes" '+(formData.insurance_acknowledgment==='yes'?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">YES</label></div><div class="flex items-center space-x-3 p-4 border-2 '+(formData.insurance_acknowledgment==='no'?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="formData.insurance_acknowledgment=\'no\';renderStep();"><input type="radio" name="insurance" value="no" '+(formData.insurance_acknowledgment==='no'?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">NO (exit survey)</label></div></div></div></div>';}else if(currentStep===3){const o=[{value:"anxiety",label:"Anxiety"},{value:"depression",label:"Depression"},{value:"ptsd",label:"PTSD"},{value:"eating_disorder",label:"Eating Disorder"},{value:"autism",label:"Autism"},{value:"migraines",label:"Migraines"},{value:"chronic_nerve_pain",label:"Chronic Nerve Pain"},{value:"other",label:"Other"}];sc='<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Which, if any, of the following are you struggling with?</h2><div class="space-y-3">'+o.map(opt=>'<div class="flex items-center space-x-3 p-4 border-2 '+(formData.struggling_with.includes(opt.value)?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="toggleArrayItem(formData.struggling_with,\''+opt.value+'\');renderStep();"><input type="checkbox" '+(formData.struggling_with.includes(opt.value)?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">'+opt.label+'</label></div>').join('')+'</div>';}else if(currentStep===4){const o=[{value:"improve_mood",label:"Improve my mood and overall outlook"},{value:"lower_anxiety",label:"Lower my anxiety levels"},{value:"mental_clarity",label:"Achieve greater mental clarity"},{value:"break_negative_patterns",label:"Get 'unstuck' or break free from negative thought patterns"},{value:"increase_motivation",label:"Increase motivation and drive"},{value:"process_trauma",label:"Process past trauma"}];sc='<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">What do you hope to get out of treatment?</h2><div class="space-y-3">'+o.map(opt=>'<div class="flex items-center space-x-3 p-4 border-2 '+(formData.treatment_goals.includes(opt.value)?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="toggleArrayItem(formData.treatment_goals,\''+opt.value+'\');renderStep();"><input type="checkbox" '+(formData.treatment_goals.includes(opt.value)?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">'+opt.label+'</label></div>').join('')+'</div>';}else if(currentStep===5){const o=[{value:"pregnant_or_planning",label:"I am pregnant, or plan to become pregnant"},{value:"schizophrenia_psychosis",label:"I have a history of schizophrenia or psychosis"},{value:"family_schizophrenia",label:"My family has a history of schizophrenia or psychosis"},{value:"uncontrolled_hypertension",label:"I have uncontrolled hypertension"},{value:"liver_problems",label:"I have a history of liver problems or cirrhosis"},{value:"heart_failure",label:"I have had congestive heart failure"},{value:"aneurysm_stroke",label:"I have had an aneurysm or hemorrhagic stroke"}];sc='<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Medical History</h2><p class="text-gray-600 mb-6">Ketamine therapy isn't right for everyone. Please tell us about your medical history.</p><div class="space-y-3">'+o.map(opt=>'<div class="flex items-center space-x-3 p-4 border-2 '+(formData.medical_history.includes(opt.value)?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="toggleArrayItem(formData.medical_history,\''+opt.value+'\');renderStep();"><input type="checkbox" '+(formData.medical_history.includes(opt.value)?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1">'+opt.label+'</label></div>').join('')+'<div class="flex items-center space-x-3 p-4 border-2 '+(formData.medical_history.includes('none')?'border-purple-900 bg-purple-50':'border-gray-200')+' rounded-xl hover:border-purple-900 transition-colors cursor-pointer" onclick="toggleArrayItem(formData.medical_history,\'none\');renderStep();"><input type="checkbox" '+(formData.medical_history.includes('none')?'checked':'')+' class="w-5 h-5"><label class="text-lg cursor-pointer flex-1 font-semibold">None of these apply to me</label></div></div>';}else if(currentStep===6){sc='<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">How Can We Contact You?</h2><p class="text-gray-600 mb-6">We'll use this information to reach out about your consultation.</p><div class="space-y-6"><div><label class="text-lg font-semibold mb-2 block">Full Name *</label><input type="text" id="name-input" value="'+formData.full_name+'" placeholder="John Smith" class="w-full text-lg p-6 border-2 border-gray-200 rounded-xl focus:border-purple-900 focus:outline-none"></div><div><label class="text-lg font-semibold mb-2 block">Email Address *</label><input type="email" id="email-input" value="'+formData.email+'" placeholder="john@example.com" class="w-full text-lg p-6 border-2 border-gray-200 rounded-xl focus:border-purple-900 focus:outline-none"></div><div><label class="text-lg font-semibold mb-2 block">Phone Number *</label><input type="tel" id="phone-input" value="'+formData.phone+'" placeholder="(478) 123-4567" class="w-full text-lg p-6 border-2 border-gray-200 rounded-xl focus:border-purple-900 focus:outline-none"></div><div class="flex items-start space-x-3 p-4 border-2 border-gray-200 rounded-xl"><input type="checkbox" id="sms-consent" '+(formData.sms_consent?'checked':'')+' class="w-5 h-5 mt-1"><label for="sms-consent" class="text-sm cursor-pointer leading-relaxed">I Consent to Receive SMS Notifications from Ketamine Center Of Central Georgia. You can reply STOP to unsubscribe at any time.</label></div></div>';}const nb='<div class="flex justify-between mt-8 pt-6 border-t border-gray-200">'+(currentStep>1?'<button onclick="handleBack()" class="flex items-center gap-2 px-6 py-3 border-2 border-gray-300 rounded-lg hover:bg-gray-50 font-semibold">← Back</button>':'<div></div>')+'<button onclick="handleNext()" '+(canProceed()?'':'disabled')+' class="ml-auto bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">'+(currentStep===6?'Submit':'Next')+' →</button></div>';document.getElementById('modal-content').innerHTML=pb+sc+nb;if(currentStep===2){const d=document.getElementById('dob-input');d.addEventListener('input',(e)=>{let v=e.target.value;if(v.length<formData.date_of_birth.length){formData.date_of_birth=v;return;}v=v.replace(/\\D/g,'');if(v.length>=2)v=v.slice(0,2)+'/'+v.slice(2);if(v.length>=5)v=v.slice(0,5)+'/'+v.slice(5,9);formData.date_of_birth=v;e.target.value=v;});}if(currentStep===6){document.getElementById('name-input').addEventListener('input',(e)=>formData.full_name=e.target.value);document.getElementById('email-input').addEventListener('input',(e)=>formData.email=e.target.value);document.getElementById('phone-input').addEventListener('input',(e)=>formData.phone=e.target.value);document.getElementById('sms-consent').addEventListener('change',(e)=>formData.sms_consent=e.target.checked);}}
+
+function openAssessment() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectParams = new URLSearchParams({
+        utm_source: urlParams.get('utm_source') || '',
+        utm_medium: urlParams.get('utm_medium') || '',
+        utm_campaign: urlParams.get('utm_campaign') || '',
+        utm_term: urlParams.get('utm_term') || '',
+        utm_content: urlParams.get('utm_content') || ''
+    });
+    window.location.href = REDIRECT_URL + '?' + redirectParams.toString();
+}
 </script>
+
 </body>
 </html>`;
 
 export default function StandaloneHTMLExport() {
-    return null;
+  return (
+    <div className="p-8 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Standalone HTML Export</h1>
+      <p className="mb-4">Copy the HTML code from this component file to use for your ads landing page.</p>
+      <div className="bg-slate-100 p-4 rounded-lg">
+        <p className="text-sm text-slate-600">The complete HTML is stored in the STANDALONE_HTML constant above.</p>
+        <p className="text-sm text-slate-600">This file contains the full Home2 page with correct colors (#352253 and #ec9e21).</p>
+      </div>
+    </div>
+  );
 }
