@@ -6,7 +6,7 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ketamine Therapy - At-Home Treatment for Depression & Anxiety</title>
+    <title>Ketamine Therapy - IV Treatment for Depression & Anxiety</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -18,21 +18,6 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
         .pulse-dot { animation: pulse-glow 1.5s infinite; }
         .modal-backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); }
     </style>
-    
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1006822321616040');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1006822321616040&ev=PageView&noscript=1"/></noscript>
 </head>
 <body class="bg-white">
 
