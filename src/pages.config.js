@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Home2 from './pages/Home2';
 import ThankYou from './pages/ThankYou';
 import assessment from './pages/assessment';
+import standaloneLanding from './pages/standalone-landing';
 import __Layout from './Layout.jsx';
 
 
@@ -12,6 +13,7 @@ export const PAGES = {
     "Home2": Home2,
     "ThankYou": ThankYou,
     "assessment": assessment,
+    "standalone-landing": standaloneLanding,
 }
 
 export const pagesConfig = {
