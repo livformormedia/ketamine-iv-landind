@@ -306,6 +306,16 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
     </div>
 </section>
 
+<!-- Floating CTA Button -->
+<div id="floatingCTA" class="fixed bottom-6 left-0 right-0 z-50 px-4" style="display: none;">
+    <div class="max-w-4xl mx-auto">
+        <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
+            <div class="absolute inset-0 bg-[#ec9e21]/30 rounded-2xl animate-ping-slow"></div>
+            <span class="relative leading-tight">Start Healing Today</span>
+        </button>
+    </div>
+</div>
+
 <script>
 const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/rctm6c6z5rfu14oj2o4qy4cxhapknekx';
 const REDIRECT_URL = 'https://ketaminecenter.livformor.com/ty-keta';
@@ -321,6 +331,16 @@ function openAssessment() {
     });
     window.location.href = REDIRECT_URL + '?' + redirectParams.toString();
 }
+
+// Floating CTA scroll detection
+window.addEventListener('scroll', function() {
+    const floatingCTA = document.getElementById('floatingCTA');
+    if (window.scrollY > 800) {
+        floatingCTA.style.display = 'block';
+    } else {
+        floatingCTA.style.display = 'none';
+    }
+});
 </script>
 
 </body>
