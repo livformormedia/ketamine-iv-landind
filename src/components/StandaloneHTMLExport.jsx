@@ -436,12 +436,26 @@ function renderStep(step) {
                 <button onclick="nextStep()" class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold">Next →</button>
             </div>
         `;
-        document.getElementById('dob').addEventListener('input', function(e) {
+        const dobInput = document.getElementById('dob');
+        dobInput.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length >= 2) value = value.slice(0, 2) + '/' + value.slice(2);
             if (value.length >= 5) value = value.slice(0, 5) + '/' + value.slice(5, 9);
             e.target.value = value;
             formData.date_of_birth = value;
+        });
+        dobInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Backspace') {
+                const cursorPos = e.target.selectionStart;
+                const value = e.target.value;
+                if (cursorPos > 0 && (value[cursorPos - 1] === '/' || value[cursorPos] === '/')) {
+                    e.preventDefault();
+                    const newValue = value.slice(0, cursorPos - 1) + value.slice(cursorPos);
+                    e.target.value = newValue.replace(/\D/g, '');
+                    e.target.dispatchEvent(new Event('input'));
+                    e.target.setSelectionRange(cursorPos - 1, cursorPos - 1);
+                }
+            }
         });
     } else if (step === 3) {
         content.innerHTML = `
