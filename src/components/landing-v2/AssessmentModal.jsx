@@ -70,8 +70,16 @@ export default function AssessmentModal({ isOpen, onClose }) {
   }, [isOpen]);
 
   const calculateAge = (birthDate) => {
+    // Parse MM/DD/YYYY format
+    const parts = birthDate.split('/');
+    if (parts.length !== 3) return 0;
+    
+    const month = parseInt(parts[0], 10) - 1; // JS months are 0-indexed
+    const day = parseInt(parts[1], 10);
+    const year = parseInt(parts[2], 10);
+    
     const today = new Date();
-    const birth = new Date(birthDate);
+    const birth = new Date(year, month, day);
     let age = today.getFullYear() - birth.getFullYear();
     const monthDiff = today.getMonth() - birth.getMonth();
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
