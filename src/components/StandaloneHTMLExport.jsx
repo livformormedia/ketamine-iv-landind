@@ -309,10 +309,31 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
 <!-- Floating CTA Button -->
 <div id="floatingCTA" class="fixed bottom-6 left-0 right-0 z-50 px-4" style="display: none;">
     <div class="max-w-4xl mx-auto">
-        <button onclick="openAssessment()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
+        <button onclick="openModal()" class="w-full bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white text-base md:text-xl px-6 py-6 md:py-8 shadow-2xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl relative overflow-hidden group">
             <div class="absolute inset-0 bg-[#ec9e21]/30 rounded-2xl animate-ping-slow"></div>
             <span class="relative leading-tight">Start Healing Today</span>
         </button>
+    </div>
+</div>
+
+<!-- Assessment Modal -->
+<div id="assessmentModal" class="fixed inset-0 z-50 items-center justify-center bg-black bg-opacity-70 p-4 overflow-y-auto" style="display: none; backdrop-filter: blur(8px);">
+    <div class="relative w-full max-w-3xl my-8">
+        <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-slate-300 transition-colors">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        
+        <div id="progressBar" class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-white text-sm">Step <span id="currentStep">1</span> of 6</span>
+                <span class="text-purple-300 text-sm"><span id="progress">17</span>% Complete</span>
+            </div>
+            <div class="w-full bg-slate-700 rounded-full h-2">
+                <div id="progressFill" class="bg-gradient-to-r from-[#352253] to-[#ec9e21] h-2 rounded-full transition-all duration-300" style="width: 17%"></div>
+            </div>
+        </div>
+
+        <div id="modalContent" class="bg-white rounded-3xl p-6 md:p-12 shadow-2xl max-h-[70vh] overflow-y-auto"></div>
     </div>
 </div>
 
@@ -321,30 +342,292 @@ const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/rctm6c6z5rfu14oj2o4qy4cxhapk
 const LEADCONNECTOR_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/0BHlTU6piHyy61dNErcM/webhook-trigger/182o3OsH4454tZS4YHiq';
 const REDIRECT_URL = 'https://ketaminecenter.livformor.com/ty-keta';
 
-function openAssessment() {
+let currentStep = 1;
+let formData = {
+    lives_in_georgia: '',
+    date_of_birth: '',
+    insurance_acknowledgment: '',
+    struggling_with: [],
+    treatment_goals: [],
+    medical_history: [],
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone: '',
+    sms_consent: false,
+    utm_source: '',
+    utm_medium: '',
+    utm_campaign: '',
+    utm_term: '',
+    utm_content: ''
+};
+
+function openModal() {
     const urlParams = new URLSearchParams(window.location.search);
-    const utmData = {
-        utm_source: urlParams.get('utm_source') || '',
-        utm_medium: urlParams.get('utm_medium') || '',
-        utm_campaign: urlParams.get('utm_campaign') || '',
-        utm_term: urlParams.get('utm_term') || '',
-        utm_content: urlParams.get('utm_content') || ''
-    };
+    formData.utm_source = urlParams.get('utm_source') || '';
+    formData.utm_medium = urlParams.get('utm_medium') || '';
+    formData.utm_campaign = urlParams.get('utm_campaign') || '';
+    formData.utm_term = urlParams.get('utm_term') || '';
+    formData.utm_content = urlParams.get('utm_content') || '';
     
-    // Send to both webhooks
-    fetch(MAKE_WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(utmData)
-    }).catch(e => console.log('Make webhook error:', e));
+    document.getElementById('assessmentModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    renderStep(1);
+}
+
+function closeModal() {
+    document.getElementById('assessmentModal').style.display = 'none';
+    document.body.style.overflow = 'unset';
+}
+
+function updateProgress(step) {
+    document.getElementById('currentStep').textContent = step;
+    document.getElementById('progress').textContent = Math.round((step / 6) * 100);
+    document.getElementById('progressFill').style.width = ((step / 6) * 100) + '%';
+}
+
+function renderStep(step) {
+    currentStep = step;
+    updateProgress(step);
+    const content = document.getElementById('modalContent');
     
-    fetch(LEADCONNECTOR_WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(utmData)
-    }).catch(e => console.log('LeadConnector webhook error:', e));
+    if (step === 1) {
+        content.innerHTML = `
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Do you live in Georgia?</h2>
+            <div class="space-y-4">
+                <div onclick="setRadio('lives_in_georgia', 'yes')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.lives_in_georgia === 'yes' ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                    <input type="radio" name="lives_in_georgia" value="yes" ${formData.lives_in_georgia === 'yes' ? 'checked' : ''}>
+                    <label class="text-lg cursor-pointer flex-1">Yes</label>
+                </div>
+                <div onclick="setRadio('lives_in_georgia', 'no')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.lives_in_georgia === 'no' ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                    <input type="radio" name="lives_in_georgia" value="no" ${formData.lives_in_georgia === 'no' ? 'checked' : ''}>
+                    <label class="text-lg cursor-pointer flex-1">No</label>
+                </div>
+            </div>
+            <div class="flex justify-end mt-8 pt-6 border-t border-slate-200">
+                <button onclick="nextStep()" ${!formData.lives_in_georgia ? 'disabled' : ''} class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed">Next →</button>
+            </div>
+        `;
+    } else if (step === 2) {
+        content.innerHTML = `
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Date of Birth</h2>
+                    <p class="text-slate-600 text-sm mb-4">Format: MM/DD/YYYY</p>
+                    <input type="text" id="dob" value="${formData.date_of_birth}" maxlength="10" placeholder="MM/DD/YYYY" class="w-full text-lg p-6 border-2 border-slate-200 rounded-xl focus:border-[#352253] focus:outline-none">
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">Ketamine Therapy is Not Covered by Insurance</h3>
+                    <p class="text-slate-600 mb-6">I understand that ketamine therapy is not covered by insurance and is an out-of-pocket investment in my mental health and future success.</p>
+                    <div class="space-y-4">
+                        <div onclick="setRadio('insurance_acknowledgment', 'yes')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.insurance_acknowledgment === 'yes' ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                            <input type="radio" name="insurance_acknowledgment" value="yes" ${formData.insurance_acknowledgment === 'yes' ? 'checked' : ''}>
+                            <label class="text-lg cursor-pointer flex-1">YES</label>
+                        </div>
+                        <div onclick="setRadio('insurance_acknowledgment', 'no')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.insurance_acknowledgment === 'no' ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                            <input type="radio" name="insurance_acknowledgment" value="no" ${formData.insurance_acknowledgment === 'no' ? 'checked' : ''}>
+                            <label class="text-lg cursor-pointer flex-1">NO (exit survey)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between mt-8 pt-6 border-t border-slate-200">
+                <button onclick="prevStep()" class="flex items-center gap-2 px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-50">← Back</button>
+                <button onclick="nextStep()" class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold">Next →</button>
+            </div>
+        `;
+        document.getElementById('dob').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) value = value.slice(0, 2) + '/' + value.slice(2);
+            if (value.length >= 5) value = value.slice(0, 5) + '/' + value.slice(5, 9);
+            e.target.value = value;
+            formData.date_of_birth = value;
+        });
+    } else if (step === 3) {
+        content.innerHTML = `
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Which, if any, of the following are you struggling with?</h2>
+            <div class="space-y-3">
+                ${['anxiety', 'depression', 'ptsd', 'eating_disorder', 'autism', 'migraines', 'chronic_nerve_pain', 'other'].map(val => {
+                    const labels = {anxiety: 'Anxiety', depression: 'Depression', ptsd: 'PTSD', eating_disorder: 'Eating Disorder', autism: 'Autism', migraines: 'Migraines', chronic_nerve_pain: 'Chronic Nerve Pain', other: 'Other'};
+                    return `<div onclick="toggleCheck('struggling_with', '${val}')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.struggling_with.includes(val) ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                        <input type="checkbox" ${formData.struggling_with.includes(val) ? 'checked' : ''}>
+                        <label class="text-lg cursor-pointer flex-1">${labels[val]}</label>
+                    </div>`;
+                }).join('')}
+            </div>
+            <div class="flex justify-between mt-8 pt-6 border-t border-slate-200">
+                <button onclick="prevStep()" class="flex items-center gap-2 px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-50">← Back</button>
+                <button onclick="nextStep()" ${formData.struggling_with.length === 0 ? 'disabled' : ''} class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold disabled:opacity-50">Next →</button>
+            </div>
+        `;
+    } else if (step === 4) {
+        content.innerHTML = `
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">What do you hope to get out of treatment?</h2>
+            <div class="space-y-3">
+                ${['improve_mood', 'lower_anxiety', 'mental_clarity', 'break_negative_patterns', 'increase_motivation', 'process_trauma'].map(val => {
+                    const labels = {improve_mood: 'Improve my mood and overall outlook', lower_anxiety: 'Lower my anxiety levels', mental_clarity: 'Achieve greater mental clarity', break_negative_patterns: 'Get \'unstuck\' or break free from negative thought patterns', increase_motivation: 'Increase motivation and drive', process_trauma: 'Process past trauma'};
+                    return `<div onclick="toggleCheck('treatment_goals', '${val}')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.treatment_goals.includes(val) ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                        <input type="checkbox" ${formData.treatment_goals.includes(val) ? 'checked' : ''}>
+                        <label class="text-lg cursor-pointer flex-1">${labels[val]}</label>
+                    </div>`;
+                }).join('')}
+            </div>
+            <div class="flex justify-between mt-8 pt-6 border-t border-slate-200">
+                <button onclick="prevStep()" class="flex items-center gap-2 px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-50">← Back</button>
+                <button onclick="nextStep()" ${formData.treatment_goals.length === 0 ? 'disabled' : ''} class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold disabled:opacity-50">Next →</button>
+            </div>
+        `;
+    } else if (step === 5) {
+        content.innerHTML = `
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Medical History</h2>
+            <p class="text-slate-600 mb-6">Ketamine therapy isn't right for everyone. Please tell us about your medical history.</p>
+            <div class="space-y-3">
+                ${['pregnant_or_planning', 'schizophrenia_psychosis', 'family_schizophrenia', 'uncontrolled_hypertension', 'liver_problems', 'heart_failure', 'aneurysm_stroke', 'none'].map(val => {
+                    const labels = {pregnant_or_planning: 'I am pregnant, or plan to become pregnant', schizophrenia_psychosis: 'I have a history of schizophrenia or psychosis', family_schizophrenia: 'My family has a history of schizophrenia or psychosis', uncontrolled_hypertension: 'I have uncontrolled hypertension', liver_problems: 'I have a history of liver problems or cirrhosis', heart_failure: 'I have had congestive heart failure', aneurysm_stroke: 'I have had an aneurysm or hemorrhagic stroke', none: 'None of these apply to me'};
+                    return `<div onclick="toggleCheck('medical_history', '${val}')" class="flex items-center space-x-3 p-4 border-2 border-slate-200 rounded-xl hover:border-[#352253] transition-colors cursor-pointer ${formData.medical_history.includes(val) ? 'border-[#352253] bg-[#352253]/5' : ''}">
+                        <input type="checkbox" ${formData.medical_history.includes(val) ? 'checked' : ''}>
+                        <label class="text-lg cursor-pointer flex-1 ${val === 'none' ? 'font-semibold' : ''}">${labels[val]}</label>
+                    </div>`;
+                }).join('')}
+            </div>
+            <div class="flex justify-between mt-8 pt-6 border-t border-slate-200">
+                <button onclick="prevStep()" class="flex items-center gap-2 px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-50">← Back</button>
+                <button onclick="nextStep()" ${formData.medical_history.length === 0 ? 'disabled' : ''} class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold disabled:opacity-50">Next →</button>
+            </div>
+        `;
+    } else if (step === 6) {
+        content.innerHTML = `
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">How Can We Contact You?</h2>
+            <p class="text-slate-600 mb-6">We'll use this information to reach out about your consultation.</p>
+            <div class="space-y-6">
+                <div>
+                    <label class="text-lg font-semibold mb-2 block">First Name *</label>
+                    <input type="text" id="first_name" value="${formData.first_name}" placeholder="John" class="w-full text-lg p-6 border-2 border-slate-200 rounded-xl focus:border-[#352253] focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-lg font-semibold mb-2 block">Last Name *</label>
+                    <input type="text" id="last_name" value="${formData.last_name}" placeholder="Smith" class="w-full text-lg p-6 border-2 border-slate-200 rounded-xl focus:border-[#352253] focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-lg font-semibold mb-2 block">Email Address *</label>
+                    <input type="email" id="email" value="${formData.email}" placeholder="john@example.com" class="w-full text-lg p-6 border-2 border-slate-200 rounded-xl focus:border-[#352253] focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-lg font-semibold mb-2 block">Phone Number *</label>
+                    <input type="tel" id="phone" value="${formData.phone}" placeholder="(478) 123-4567" class="w-full text-lg p-6 border-2 border-slate-200 rounded-xl focus:border-[#352253] focus:outline-none">
+                </div>
+                <div class="flex items-start space-x-3 p-4 border-2 border-slate-200 rounded-xl">
+                    <input type="checkbox" id="sms_consent" ${formData.sms_consent ? 'checked' : ''}>
+                    <label for="sms_consent" class="text-sm cursor-pointer leading-relaxed">I Consent to Receive SMS Notifications from Ketamine Center Of Central Georgia. You can reply STOP to unsubscribe at any time.</label>
+                </div>
+            </div>
+            <div class="flex justify-between mt-8 pt-6 border-t border-slate-200">
+                <button onclick="prevStep()" class="flex items-center gap-2 px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-50">← Back</button>
+                <button onclick="submitForm()" class="bg-[#ec9e21] hover:bg-[#ec9e21]/90 text-white px-8 py-3 rounded-lg font-semibold">Submit</button>
+            </div>
+        `;
+        ['first_name', 'last_name', 'email', 'phone'].forEach(field => {
+            document.getElementById(field).addEventListener('input', function(e) {
+                formData[field] = e.target.value;
+            });
+        });
+        document.getElementById('sms_consent').addEventListener('change', function(e) {
+            formData.sms_consent = e.target.checked;
+        });
+    }
+}
+
+function setRadio(field, value) {
+    formData[field] = value;
+    renderStep(currentStep);
+}
+
+function toggleCheck(field, value) {
+    if (formData[field].includes(value)) {
+        formData[field] = formData[field].filter(v => v !== value);
+    } else {
+        formData[field].push(value);
+    }
+    renderStep(currentStep);
+}
+
+function calculateAge(birthDate) {
+    const parts = birthDate.split('/');
+    if (parts.length !== 3) return 0;
+    const month = parseInt(parts[0], 10) - 1;
+    const day = parseInt(parts[1], 10);
+    const year = parseInt(parts[2], 10);
+    const today = new Date();
+    const birth = new Date(year, month, day);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) age--;
+    return age;
+}
+
+function nextStep() {
+    if (currentStep === 1 && formData.lives_in_georgia === 'no') {
+        alert('Unfortunately, we currently only serve patients in Georgia.');
+        return;
+    }
+    if (currentStep === 2) {
+        const dob = document.getElementById('dob').value;
+        formData.date_of_birth = dob;
+        if (calculateAge(dob) < 18) {
+            alert('You must be 18 years or older to qualify for ketamine therapy.');
+            return;
+        }
+        if (formData.insurance_acknowledgment === 'no') {
+            alert('Understanding the out-of-pocket investment is required to proceed.');
+            return;
+        }
+    }
+    if (currentStep === 5) {
+        const disqualifying = ['pregnant_or_planning', 'schizophrenia_psychosis', 'family_schizophrenia', 'uncontrolled_hypertension', 'liver_problems', 'heart_failure', 'aneurysm_stroke'];
+        if (formData.medical_history.some(c => disqualifying.includes(c))) {
+            alert('Based on your medical history, ketamine therapy may not be safe for you at this time. Please consult with your primary care physician.');
+            return;
+        }
+    }
+    renderStep(currentStep + 1);
+}
+
+function prevStep() {
+    renderStep(currentStep - 1);
+}
+
+async function submitForm() {
+    if (!formData.first_name || !formData.last_name || !formData.email || !formData.phone) {
+        alert('Please fill in all required fields');
+        return;
+    }
     
-    const redirectParams = new URLSearchParams(utmData);
+    const payload = {...formData, status: 'qualified'};
+    
+    try {
+        await Promise.all([
+            fetch(MAKE_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }),
+            fetch(LEADCONNECTOR_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+        ]);
+    } catch (e) {
+        console.log('Webhook error:', e);
+    }
+    
+    const redirectParams = new URLSearchParams({
+        utm_source: formData.utm_source,
+        utm_medium: formData.utm_medium,
+        utm_campaign: formData.utm_campaign,
+        utm_term: formData.utm_term,
+        utm_content: formData.utm_content
+    });
     window.location.href = REDIRECT_URL + '?' + redirectParams.toString();
 }
 
