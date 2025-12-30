@@ -288,10 +288,18 @@ export default function AssessmentModal({ isOpen, onClose }) {
                 <div className="space-y-8">
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Date of Birth</h2>
+                    <p className="text-slate-600 text-sm mb-4">Format: MM/DD/YYYY</p>
                     <Input
-                      type="date"
+                      type="text"
                       value={formData.date_of_birth}
-                      onChange={(e) => setFormData({...formData, date_of_birth: e.target.value})}
+                      onChange={(e) => {
+                        let value = e.target.value.replace(/\D/g, '');
+                        if (value.length >= 2) value = value.slice(0, 2) + '/' + value.slice(2);
+                        if (value.length >= 5) value = value.slice(0, 5) + '/' + value.slice(5, 9);
+                        setFormData({...formData, date_of_birth: value});
+                      }}
+                      placeholder="MM/DD/YYYY"
+                      maxLength={10}
                       className="text-lg p-6 mt-4"
                     />
                   </div>
