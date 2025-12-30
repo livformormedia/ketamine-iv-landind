@@ -316,6 +316,7 @@ export const STANDALONE_HTML = `<!DOCTYPE html>
 </div>
 
 <script>
+function toggleFAQ(btn){const a=btn.nextElementSibling;const c=btn.querySelector('.chevron');if(a.classList.contains('hidden')){a.classList.remove('hidden');c.style.transform='rotate(180deg)';}else{a.classList.add('hidden');c.style.transform='rotate(0deg)';}}
 const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/rctm6c6z5rfu14oj2o4qy4cxhapknekx';
 const REDIRECT_URL = 'https://ketaminecenter.livformor.com/ty-keta';
 let currentStep = 1;
