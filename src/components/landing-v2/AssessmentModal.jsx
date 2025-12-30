@@ -301,7 +301,16 @@ export default function AssessmentModal({ isOpen, onClose }) {
                       type="text"
                       value={formData.date_of_birth}
                       onChange={(e) => {
-                        let value = e.target.value.replace(/\D/g, '');
+                        let value = e.target.value;
+                        
+                        // If user is deleting, just update the value
+                        if (value.length < formData.date_of_birth.length) {
+                          setFormData({...formData, date_of_birth: value});
+                          return;
+                        }
+                        
+                        // Auto-format on typing
+                        value = value.replace(/\D/g, '');
                         if (value.length >= 2) value = value.slice(0, 2) + '/' + value.slice(2);
                         if (value.length >= 5) value = value.slice(0, 5) + '/' + value.slice(5, 9);
                         setFormData({...formData, date_of_birth: value});
